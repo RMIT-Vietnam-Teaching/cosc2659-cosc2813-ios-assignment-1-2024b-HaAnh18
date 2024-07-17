@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "name": "Warm Spring",
+        "imageName": "spring",
+        "color": "spring",
+        "description": "Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues.",
+        "backgroundColor": "spring-bg"
+    },
+    {
+        "id": 2,
+        "name": "Cool Summer",
+        "imageName": "summer",
+        "color": "summer",
+        "description": "Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues.",
+        "backgroundColor": "summer-bg"
+    },
+    {
+        "id": 3,
+        "name": "Warm Autumn",
+        "imageName": "autumn",
+        "color": "autumn",
+        "description": "Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues.",
+        "backgroundColor": "autumn-bg"
+    },
+    {
+        "id": 4,
+        "name": "Cool Winter ",
+        "imageName": "winter",
+        "color": "winter",
+        "description": "Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues.",
+        "backgroundColor": "winter-bg"
+    }
+ 
+]
