@@ -8,61 +8,54 @@
 import SwiftUI
 
 struct Card: View {
+    var product: Product
     var body: some View {
-        
-//        ZStack {
-//            Color("spring-bg")
-//                .ignoresSafeArea()
-            
-            VStack {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 25.0)
-                        .foregroundColor(.white)
-                        .frame(width: 150, height: 150)
-                    
-                    Image("test-product")
+        VStack {
+            ZStack {
+                RoundedRectangle(cornerRadius: 25.0)
+                    .foregroundColor(.white)
+//                        .stroke(lineWidth: 1.0)
+                    .frame(width: 150, height: 150)
+                
+                Image(product.images[0])
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 120, height: 120)
+                
+                Button(action: {
+                }, label: {
+                    Image(systemName: "heart")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 120, height: 120)
-                    
-                    Button(action: {
-                    }, label: {
-                        Image(systemName: "heart")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 20)
-                            .font(.title)
-                            .foregroundColor(.red)
-                            
+                        .frame(width: 20)
+                        .font(.title)
+                        .foregroundColor(.red)
                         
-                    })
-                    .offset(x: 50, y: -50)
                     
-                }
-                
-                VStack {
-                    Text("Berry Fuchsia Garden")
-                        .font(Font.custom("PTSerif-Bold", size: 18))
-                        .frame(width: 150, alignment: .leading)
-                    
-                    Text("Romand")
-                        .frame(width: 150, alignment: .leading)
-
-                        
-//                }
-                
-                
-                
-                
+                })
+                .offset(x: 50, y: -50)
             }
             
-//            .background(.pink)
-            
-            
+            VStack {
+                Text(product.name)
+                    .font(Font.custom("PTSerif-Bold", size: 18))
+                    .frame(width: 170, alignment: .top)
+                    .foregroundColor(.black)
+                    .padding(.horizontal, -20)
+
+                
+                Text(product.brand)
+                    .frame(width: 150, alignment: .top)
+                    .foregroundColor(.black)
+
+                    
+            }
         }
     }
 }
 
 #Preview {
-    Card()
+//    Card(product: products[0])
+//    CardList(filterProducts: products)
+    Test()
 }

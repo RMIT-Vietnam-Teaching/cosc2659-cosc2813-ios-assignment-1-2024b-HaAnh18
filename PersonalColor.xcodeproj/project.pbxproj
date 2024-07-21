@@ -26,6 +26,16 @@
 		39B383AE2C46E29100002F23 /* PTSerif-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39B383AD2C46E29100002F23 /* PTSerif-Bold.ttf */; };
 		39B383B02C46E44100002F23 /* CardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383AF2C46E44100002F23 /* CardList.swift */; };
 		39B383B22C46EBC500002F23 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383B12C46EBC500002F23 /* Detail.swift */; };
+		39B383B42C47AF6B00002F23 /* Fustat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39B383B32C47AF6A00002F23 /* Fustat-Light.ttf */; };
+		39B383B62C47B21B00002F23 /* DescriptionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383B52C47B21B00002F23 /* DescriptionCard.swift */; };
+		39B383BA2C482F3700002F23 /* ScrollImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383B92C482F3700002F23 /* ScrollImage.swift */; };
+		39B383BC2C492D8D00002F23 /* Fustat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39B383BB2C492D8D00002F23 /* Fustat-Bold.ttf */; };
+		39B383BE2C4933B600002F23 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383BD2C4933B600002F23 /* MapView.swift */; };
+		39B383C02C4B99BA00002F23 /* TabViewStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383BF2C4B99BA00002F23 /* TabViewStore.swift */; };
+		39B383C42C4BB25000002F23 /* OnlineStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383C32C4BB25000002F23 /* OnlineStore.swift */; };
+		39B383C62C4C364C00002F23 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383C52C4C364C00002F23 /* Product.swift */; };
+		39B383C82C4C390800002F23 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 39B383C72C4C390800002F23 /* products.json */; };
+		39B383CA2C4C3B6C00002F23 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383C92C4C3B6C00002F23 /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +60,16 @@
 		39B383AD2C46E29100002F23 /* PTSerif-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PTSerif-Bold.ttf"; sourceTree = "<group>"; };
 		39B383AF2C46E44100002F23 /* CardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardList.swift; sourceTree = "<group>"; };
 		39B383B12C46EBC500002F23 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		39B383B32C47AF6A00002F23 /* Fustat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fustat-Light.ttf"; sourceTree = "<group>"; };
+		39B383B52C47B21B00002F23 /* DescriptionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCard.swift; sourceTree = "<group>"; };
+		39B383B92C482F3700002F23 /* ScrollImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollImage.swift; sourceTree = "<group>"; };
+		39B383BB2C492D8D00002F23 /* Fustat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fustat-Bold.ttf"; sourceTree = "<group>"; };
+		39B383BD2C4933B600002F23 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		39B383BF2C4B99BA00002F23 /* TabViewStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewStore.swift; sourceTree = "<group>"; };
+		39B383C32C4BB25000002F23 /* OnlineStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineStore.swift; sourceTree = "<group>"; };
+		39B383C52C4C364C00002F23 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		39B383C72C4C390800002F23 /* products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		39B383C92C4C3B6C00002F23 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +132,12 @@
 				39B383AB2C46E03E00002F23 /* Card.swift */,
 				39B383AF2C46E44100002F23 /* CardList.swift */,
 				39B383B12C46EBC500002F23 /* Detail.swift */,
+				39B383B52C47B21B00002F23 /* DescriptionCard.swift */,
+				39B383B92C482F3700002F23 /* ScrollImage.swift */,
+				39B383BD2C4933B600002F23 /* MapView.swift */,
+				39B383BF2C4B99BA00002F23 /* TabViewStore.swift */,
+				39B383C32C4BB25000002F23 /* OnlineStore.swift */,
+				39B383C92C4C3B6C00002F23 /* Test.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -119,7 +145,9 @@
 		39B383952C46820600002F23 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				39B383B32C47AF6A00002F23 /* Fustat-Light.ttf */,
 				39B383AD2C46E29100002F23 /* PTSerif-Bold.ttf */,
+				39B383BB2C492D8D00002F23 /* Fustat-Bold.ttf */,
 				39B383A92C46C02F00002F23 /* PlayfairDisplay-Bold.ttf */,
 				39B383A72C46BFF600002F23 /* PlayfairDisplay-Regular.ttf */,
 				39B383962C46821800002F23 /* DancingScript-Bold.ttf */,
@@ -134,6 +162,8 @@
 				39B3839C2C46B93200002F23 /* personalColor.json */,
 				39B3839A2C46831B00002F23 /* PersonalColor.swift */,
 				39B3839E2C46B96F00002F23 /* ModelData.swift */,
+				39B383C52C4C364C00002F23 /* Product.swift */,
+				39B383C72C4C390800002F23 /* products.json */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,11 +227,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				39B383A62C46BF1E00002F23 /* BodoniModaSC_48pt-Medium.ttf in Resources */,
+				39B383B42C47AF6B00002F23 /* Fustat-Light.ttf in Resources */,
+				39B383BC2C492D8D00002F23 /* Fustat-Bold.ttf in Resources */,
 				39B383AA2C46C02F00002F23 /* PlayfairDisplay-Bold.ttf in Resources */,
 				39B383972C46821800002F23 /* DancingScript-Bold.ttf in Resources */,
 				39B383A82C46BFF600002F23 /* PlayfairDisplay-Regular.ttf in Resources */,
 				39B3839D2C46B93200002F23 /* personalColor.json in Resources */,
 				39B383862C466D6B00002F23 /* Preview Assets.xcassets in Resources */,
+				39B383C82C4C390800002F23 /* products.json in Resources */,
 				39B383832C466D6B00002F23 /* Assets.xcassets in Resources */,
 				39B383AE2C46E29100002F23 /* PTSerif-Bold.ttf in Resources */,
 			);
@@ -215,12 +248,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				39B383812C466D6500002F23 /* ContentView.swift in Sources */,
+				39B383BA2C482F3700002F23 /* ScrollImage.swift in Sources */,
 				39B383AC2C46E03E00002F23 /* Card.swift in Sources */,
+				39B383B62C47B21B00002F23 /* DescriptionCard.swift in Sources */,
 				39B3837F2C466D6500002F23 /* PersonalColorApp.swift in Sources */,
 				39B3838E2C466DD900002F23 /* Background.swift in Sources */,
 				39B383A32C46BD9500002F23 /* NavigationList.swift in Sources */,
+				39B383BE2C4933B600002F23 /* MapView.swift in Sources */,
 				39B383942C4681ED00002F23 /* NavigationBar.swift in Sources */,
+				39B383C42C4BB25000002F23 /* OnlineStore.swift in Sources */,
+				39B383C62C4C364C00002F23 /* Product.swift in Sources */,
+				39B383CA2C4C3B6C00002F23 /* Test.swift in Sources */,
 				39B383A12C46BB1400002F23 /* Carousel.swift in Sources */,
+				39B383C02C4B99BA00002F23 /* TabViewStore.swift in Sources */,
 				39B383B02C46E44100002F23 /* CardList.swift in Sources */,
 				39B3839B2C46831B00002F23 /* PersonalColor.swift in Sources */,
 				39B383B22C46EBC500002F23 /* Detail.swift in Sources */,

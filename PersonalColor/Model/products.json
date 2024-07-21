@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "images": [
+            "test-product",
+            "test-product",
+            "test-product"
+        ],
+        "favourite": false,
+        "name": "Berry Fuchsia Garden 1",
+        "reviewStar": 4.8,
+        "brand": "Romand",
+        "category": "Palette",
+        "personalColor": "Warm Spring",
+        "address": "702 Nguyen Van Linh Street",
+        "description": "Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues. Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues. Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues.  Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues.",
+        "coordinates": {
+            "latitude": 10.729410965174186,
+            "longitude": 106.69522548892152
+        },
+        "shopee": {
+            "name": "Romand Vietnam",
+            "url": "https://www.example.com"
+        },
+        "lazada": {
+            "name": "Romand Vietnam",
+            "url": "https://www.example.com"
+        },
+        "facebook": {
+            "name": "Romand Vietnam",
+            "url": "https://www.example.com"
+        },
+        "instagram": {
+            "name": "Romand Vietnam",
+            "url": "https://www.example.com"
+        }
+    },
+    {
+        "id": 2,
+        "images": [
+            "test-product",
+            "test-product",
+            "test-product"
+        ],
+        "favourite": false,
+        "name": "Berry Fuchsia Garden 2",
+        "reviewStar": 4.8,
+        "brand": "Romand",
+        "category": "Palette",
+        "personalColor": "Cool Summer",
+        "address": "702 Nguyen Van Linh Street",
+        "description": "Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues. Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues. Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues.  Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues.",
+        "coordinates": {
+            "latitude": 10.729410965174186,
+            "longitude": 106.69522548892152
+        },
+        "shopee": {
+            "name": "Romand Vietnam",
+            "url": "https://www.example.com"
+        },
+        "lazada": {
+            "name": "Romand Vietnam",
+            "url": "https://www.example.com"
+        },
+        "facebook": {
+            "name": "Romand Vietnam",
+            "url": "https://www.example.com"
+        },
+        "instagram": {
+            "name": "Romand Vietnam",
+            "url": "https://www.example.com"
+        }
+    },
+    {
+        "id": 3,
+        "images": [
+            "test-product",
+            "test-product",
+            "test-product"
+        ],
+        "favourite": false,
+        "name": "Berry Fuchsia Garden 3",
+        "reviewStar": 4.8,
+        "brand": "Romand",
+        "category": "Palette",
+        "personalColor": "Warm Autumn",
+        "address": "702 Nguyen Van Linh Street",
+        "description": "Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues. Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues. Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues.  Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues.",
+        "coordinates": {
+            "latitude": 10.729410965174186,
+            "longitude": 106.69522548892152
+        },
+        "shopee": {
+            "name": "Romand Vietnam",
+            "url": "https://www.example.com"
+        },
+        "lazada": {
+            "name": "Romand Vietnam",
+            "url": "https://www.example.com"
+        },
+        "facebook": {
+            "name": "Romand Vietnam",
+            "url": "https://www.example.com"
+        },
+        "instagram": {
+            "name": "Romand Vietnam",
+            "url": "https://www.example.com"
+        }
+    },
+    {
+        "id": 4,
+        "images": [
+            "test-product",
+            "test-product",
+            "test-product"
+        ],
+        "favourite": false,
+        "name": "Berry Fuchsia Garden 4",
+        "reviewStar": 4.8,
+        "brand": "Romand",
+        "category": "Palette",
+        "personalColor": "Cool Winter",
+        "address": "702 Nguyen Van Linh Street",
+        "description": "Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues. Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues. Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues.  Shine in natural light with peachy skin and light hair, enhanced by bright pink, orange, yellow, green, and warm blues.",
+        "coordinates": {
+            "latitude": 10.729410965174186,
+            "longitude": 106.69522548892152
+        },
+        "shopee": {
+            "name": "Romand Vietnam",
+            "url": "https://www.example.com"
+        },
+        "lazada": {
+            "name": "Romand Vietnam",
+            "url": "https://www.example.com"
+        },
+        "facebook": {
+            "name": "Romand Vietnam",
+            "url": "https://www.example.com"
+        },
+        "instagram": {
+            "name": "Romand Vietnam",
+            "url": "https://www.example.com"
+        }
+    }
+]

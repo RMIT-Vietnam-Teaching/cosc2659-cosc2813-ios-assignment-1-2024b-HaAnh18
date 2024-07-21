@@ -27,4 +27,5 @@ func decodeJsonFromJsonFile<T: Decodable>(jsonFileName: String, model: T.Type) -
 
 
 
-var personalColor: [PersonalColor] = decodeJsonFromJsonFile(jsonFileName: "personalColor.json", model: PersonalColor.self)
+var personalColors: [PersonalColor] = decodeJsonFromJsonFile(jsonFileName: "personalColor.json", model: PersonalColor.self)
+var products: [Product] = decodeJsonFromJsonFile(jsonFileName: "products.json", model: Product.self)

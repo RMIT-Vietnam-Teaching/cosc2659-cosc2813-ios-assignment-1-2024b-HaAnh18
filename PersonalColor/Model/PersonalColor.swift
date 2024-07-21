@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct PersonalColor: Identifiable, Codable {
+struct PersonalColor: Identifiable, Codable, Equatable {
     var id: Int
     var name: String
     var imageName: String

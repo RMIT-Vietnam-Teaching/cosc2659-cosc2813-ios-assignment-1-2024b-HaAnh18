@@ -8,24 +8,28 @@
 import SwiftUI
 
 struct CardList: View {
+    @ObservedObject var viewModel: CurrentPersonalColor
+
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
+    var filterProducts: [Product]
 
     var body: some View {
-        ZStack {
-            Color("spring-bg")
-                .ignoresSafeArea()
-            ScrollView {
-                LazyVGrid(columns: columns) {
-                    ForEach(0...5, id: \.self) { index in
-                        Card()
+//        ScrollView {
+            LazyVGrid(columns: columns) {
+                ForEach(filterProducts) { product in
+                    NavigationLink {
+                        Detail(viewModel: viewModel, product: product)
+                    } label: {
+                        Card(product: product)
                             .padding(.horizontal, 10)
                     }
-                }
             }
         }
     }
 }
 
 #Preview {
-    CardList()
+//    CardList(filterProducts: products)
+//    NavigationList()
+    Test()
 }

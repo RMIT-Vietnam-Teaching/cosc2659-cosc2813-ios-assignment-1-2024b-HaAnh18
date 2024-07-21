@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "lazada-laz-square-app-icon-png-701751694968590apetz14pr1-removebg-preview.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "lazada-laz-square-app-icon-png-701751694968590apetz14pr1-removebg-preview@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "lazada-laz-square-app-icon-png-701751694968590apetz14pr1-removebg-preview@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

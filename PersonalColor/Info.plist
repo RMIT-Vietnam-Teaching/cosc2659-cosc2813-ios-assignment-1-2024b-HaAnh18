@@ -4,6 +4,8 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Fustat-Bold.ttf</string>
+		<string>Fustat-Light.ttf</string>
 		<string>PTSerif-Bold.ttf</string>
 		<string>PlayfairDisplay-Bold.ttf</string>
 		<string>PlayfairDisplay-Regular.ttf</string>
