@@ -8,18 +8,22 @@
 import SwiftUI
 
 struct Detail: View {
-    @ObservedObject var viewModel: CurrentPersonalColor
-
+    @ObservedObject var viewModel: ViewModel
+    @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
+    @Binding var isDarkMode: Bool
+    
     var product: Product
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
             Color(viewModel.colorGroup.backgroundColor)
                 .ignoresSafeArea()
             
+            ToolbarView(viewModel: viewModel, isDarkMode: $isDarkMode, product: product)
+                .zIndex(1)
+            
             ScrollView {
                 VStack(spacing: 20) {
-                    
                     ScrollImage(images: product.images)
                     
                     ShortDescription(product: product)
@@ -29,8 +33,11 @@ struct Detail: View {
                     TabViewStore(viewModel: viewModel, product: product)
                 }
             }
-            
+            .zIndex(2)
+            .padding(.top, 40)
+           
         }
+        .toolbar(.hidden, for: .navigationBar)
     }
 }
       

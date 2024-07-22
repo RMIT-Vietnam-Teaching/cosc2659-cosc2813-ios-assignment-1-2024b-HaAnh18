@@ -36,6 +36,9 @@
 		39B383C62C4C364C00002F23 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383C52C4C364C00002F23 /* Product.swift */; };
 		39B383C82C4C390800002F23 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 39B383C72C4C390800002F23 /* products.json */; };
 		39B383CA2C4C3B6C00002F23 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383C92C4C3B6C00002F23 /* Test.swift */; };
+		39B383CC2C4D77F700002F23 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383CB2C4D77F700002F23 /* VideoView.swift */; };
+		39B383CF2C4D79E000002F23 /* berry-fuchsia-garden.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383CE2C4D79E000002F23 /* berry-fuchsia-garden.mov */; };
+		39B383D12C4DEF8900002F23 /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383D02C4DEF8900002F23 /* ToolbarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,9 @@
 		39B383C52C4C364C00002F23 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		39B383C72C4C390800002F23 /* products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		39B383C92C4C3B6C00002F23 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		39B383CB2C4D77F700002F23 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		39B383CE2C4D79E000002F23 /* berry-fuchsia-garden.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "berry-fuchsia-garden.mov"; sourceTree = "<group>"; };
+		39B383D02C4DEF8900002F23 /* ToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,7 @@
 			children = (
 				39B383982C46826400002F23 /* Info.plist */,
 				39B383952C46820600002F23 /* Font */,
+				39B383CD2C4D79B000002F23 /* Video */,
 				39B383992C4682FE00002F23 /* Model */,
 				39B3838C2C466D8000002F23 /* View */,
 				39B3837E2C466D6500002F23 /* PersonalColorApp.swift */,
@@ -138,6 +145,8 @@
 				39B383BF2C4B99BA00002F23 /* TabViewStore.swift */,
 				39B383C32C4BB25000002F23 /* OnlineStore.swift */,
 				39B383C92C4C3B6C00002F23 /* Test.swift */,
+				39B383CB2C4D77F700002F23 /* VideoView.swift */,
+				39B383D02C4DEF8900002F23 /* ToolbarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,6 +175,14 @@
 				39B383C72C4C390800002F23 /* products.json */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		39B383CD2C4D79B000002F23 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				39B383CE2C4D79E000002F23 /* berry-fuchsia-garden.mov */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +245,7 @@
 			files = (
 				39B383A62C46BF1E00002F23 /* BodoniModaSC_48pt-Medium.ttf in Resources */,
 				39B383B42C47AF6B00002F23 /* Fustat-Light.ttf in Resources */,
+				39B383CF2C4D79E000002F23 /* berry-fuchsia-garden.mov in Resources */,
 				39B383BC2C492D8D00002F23 /* Fustat-Bold.ttf in Resources */,
 				39B383AA2C46C02F00002F23 /* PlayfairDisplay-Bold.ttf in Resources */,
 				39B383972C46821800002F23 /* DancingScript-Bold.ttf in Resources */,
@@ -253,11 +271,13 @@
 				39B383B62C47B21B00002F23 /* DescriptionCard.swift in Sources */,
 				39B3837F2C466D6500002F23 /* PersonalColorApp.swift in Sources */,
 				39B3838E2C466DD900002F23 /* Background.swift in Sources */,
+				39B383D12C4DEF8900002F23 /* ToolbarView.swift in Sources */,
 				39B383A32C46BD9500002F23 /* NavigationList.swift in Sources */,
 				39B383BE2C4933B600002F23 /* MapView.swift in Sources */,
 				39B383942C4681ED00002F23 /* NavigationBar.swift in Sources */,
 				39B383C42C4BB25000002F23 /* OnlineStore.swift in Sources */,
 				39B383C62C4C364C00002F23 /* Product.swift in Sources */,
+				39B383CC2C4D77F700002F23 /* VideoView.swift in Sources */,
 				39B383CA2C4C3B6C00002F23 /* Test.swift in Sources */,
 				39B383A12C46BB1400002F23 /* Carousel.swift in Sources */,
 				39B383C02C4B99BA00002F23 /* TabViewStore.swift in Sources */,

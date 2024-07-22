@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct CardList: View {
-    @ObservedObject var viewModel: CurrentPersonalColor
+    @ObservedObject var viewModel: ViewModel
+    @Binding var isDarkMode: Bool
 
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     var filterProducts: [Product]
@@ -18,9 +19,9 @@ struct CardList: View {
             LazyVGrid(columns: columns) {
                 ForEach(filterProducts) { product in
                     NavigationLink {
-                        Detail(viewModel: viewModel, product: product)
+                        Detail(viewModel: viewModel, isDarkMode: $isDarkMode, product: product)
                     } label: {
-                        Card(product: product)
+                        Card(viewModel: viewModel, product: product)
                             .padding(.horizontal, 10)
                     }
             }

@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct Test: View {
-    @StateObject var personalColor = CurrentPersonalColor()
-//    let filter = products.filter { product in
-//        return product.personalColor == "Warm Spring"
-//    }
+    @AppStorage("isDarkMode") private var isDarkMode: Bool = true
+
     var body: some View {
-        NavigationView {
-            NavigationList()
-            
+        NavigationStack {
+            NavigationList(isDarkMode: $isDarkMode)
         }
+        .preferredColorScheme(isDarkMode ? .dark : .light)
     }
     
     

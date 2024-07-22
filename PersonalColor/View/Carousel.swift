@@ -12,7 +12,7 @@ struct Carousel: View {
     @State private var activeID: Int?
 //    @State private var activeCategory: Category? = categories[categories.count / 2]
 
-    @ObservedObject var viewModel: CurrentPersonalColor
+    @ObservedObject var viewModel: ViewModel
     var body: some View {
         VStack {
             GeometryReader {

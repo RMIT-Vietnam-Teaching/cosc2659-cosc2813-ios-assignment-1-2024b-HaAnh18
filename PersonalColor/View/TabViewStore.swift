@@ -10,7 +10,7 @@ import MapKit
 
 struct TabViewStore: View {
     @State var currentTab: Int = 0
-    @ObservedObject var viewModel: CurrentPersonalColor
+    @ObservedObject var viewModel: ViewModel
 
     var product: Product
     
@@ -19,6 +19,7 @@ struct TabViewStore: View {
             TabView(selection: self.$currentTab) {
                 MapView(viewModel: viewModel, product: product).tag(0)
                 OnlineStore(product: product).tag(1)
+                VideoView(product: product).tag(2)
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             
@@ -30,13 +31,13 @@ struct TabViewStore: View {
 }
 
 struct TabBarView: View {
-    @ObservedObject var viewModel: CurrentPersonalColor
+    @ObservedObject var viewModel: ViewModel
     @Binding var currentTab: Int
     @Namespace var namespace
-    var tabBarOptions: [String] = ["Offline Store", "Online Store"]
+    var tabBarOptions: [String] = ["Offline Store", "Online Store", "Swatch Video"]
     
     var body: some View {
-        HStack(spacing: 20) {
+        HStack(spacing: 5) {
             ForEach(Array(zip(self.tabBarOptions.indices, self.tabBarOptions)), id: \.0, content: { index, name in
                 TabBarItems(viewModel: viewModel, currentTab: self.$currentTab, namespace: namespace.self, tabBarItemName: name, tab: index)
             })
@@ -46,7 +47,7 @@ struct TabBarView: View {
 }
 
 struct TabBarItems: View {
-    @ObservedObject var viewModel: CurrentPersonalColor
+    @ObservedObject var viewModel: ViewModel
     @Binding var currentTab: Int
     let namespace: Namespace.ID
     var tabBarItemName: String
@@ -59,7 +60,7 @@ struct TabBarItems: View {
             VStack {
                 Text(tabBarItemName)
                     .font(Font.custom("Fustat-Light", size: 18))
-                    .foregroundColor(currentTab == tab ? Color(viewModel.colorGroup.color) : .black)
+                    .foregroundColor(currentTab == tab ? Color(viewModel.colorGroup.color) : Color("black"))
 
                 if currentTab == tab {
                     Color(currentTab == tab ? Color(viewModel.colorGroup.color) : .black)
@@ -70,7 +71,7 @@ struct TabBarItems: View {
                         .frame(height: 1)
                 }
             }
-            .frame(width: 150)
+//            .frame(width: 150)
             .animation(.spring(), value: self.currentTab)
         })
     }

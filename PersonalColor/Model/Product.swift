@@ -30,6 +30,7 @@ struct Product: Identifiable, Codable {
     var lazada: SocialLink
     var facebook: SocialLink
     var instagram: SocialLink
+    var video: String
 }
 
 struct SocialLink: Codable {

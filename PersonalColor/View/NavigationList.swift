@@ -7,20 +7,53 @@
 
 import SwiftUI
 
-class CurrentPersonalColor: ObservableObject {
+class ViewModel: ObservableObject {
     @Published var colorGroup: PersonalColor
+    @Published var productList: [Product]
+    @Published var showingFavs: Bool
+    @Published var favouriteProducts: Set<Int>
+    
+    var filteredProducts: [Product] {
+        if showingFavs {
+            return productList.filter { favouriteProducts.contains($0.id)
+            }
+        } else {
+            return productList
+        }
+    }
     
     init() {
         self.colorGroup = personalColors[0]
+        self.productList = products
+        self.showingFavs = false
+        self.favouriteProducts = [1]
+    }
+    
+    func sortFavs() {
+        withAnimation {
+            showingFavs.toggle()
+        }
+    }
+    
+    func contains(_ product: Product) -> Bool {
+        favouriteProducts.contains(product.id)
+    }
+    
+    func toggleFav(product: Product) {
+        if contains(product) {
+            favouriteProducts.remove(product.id)
+        } else {
+            favouriteProducts.insert(product.id) 
+        }
     }
 }
 
 struct NavigationList: View {
-    @StateObject var viewModel = CurrentPersonalColor()
+    @StateObject var viewModel = ViewModel()
     @State private var searchText:String = ""
     @State private var filter: String = "All"
     @State private var isFilter: Bool = false
-    @State var filterProduct: [Product] = []
+    @Binding var isDarkMode: Bool
     
     let filterOptions: [String] = ["All", "Palette", "Lipstick"]
 
@@ -28,10 +61,11 @@ struct NavigationList: View {
         ZStack {
             Color(viewModel.colorGroup.backgroundColor)
                 .ignoresSafeArea()
+
             
             ScrollView {
                 VStack(spacing: 20) {
-                    NavigationBar()
+                    NavigationBar(viewModel: viewModel, isDarkMode: $isDarkMode)
                     
                     Carousel(viewModel: viewModel)
                                                             
@@ -41,7 +75,7 @@ struct NavigationList: View {
 //                        .background(.white)
                     
                     ZStack(alignment: .top) {
-                        CardList(viewModel: viewModel, filterProducts: filterProduct)
+                        CardList(viewModel: viewModel, isDarkMode: $isDarkMode, filterProducts: viewModel.filteredProducts)
                             .padding(.top, 70)
                         .onAppear{
                             filterProducts()
@@ -84,16 +118,18 @@ struct NavigationList: View {
                             })
                     }
                 }
-                }
             }
+           
         }
+        
+    }
     
     private func filterProducts() {
-        filterProduct = products.filter { product in
+        viewModel.productList = products.filter { product in
             return product.personalColor == viewModel.colorGroup.name
         }
         if filter != "All" && filter != "" {
-            filterProduct = products.filter { product in
+            viewModel.productList = viewModel.productList.filter { product in
                 return product.category == filter
             }
         }

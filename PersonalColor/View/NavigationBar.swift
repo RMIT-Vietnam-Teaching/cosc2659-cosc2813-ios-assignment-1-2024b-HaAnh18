@@ -9,39 +9,64 @@ import SwiftUI
 
 struct NavigationBar: View {
     @State private var favouriteState = "heart"
+    @ObservedObject var viewModel: ViewModel
+    @Binding var isDarkMode: Bool
+
     var body: some View {
 //        ZStack {
 //            Color(.blue)
 //                .ignoresSafeArea()
             
-            HStack(spacing: 70) {
+            
+//        }
+        
+        GeometryReader { geo in
+            let width = geo.size.width
+            HStack(spacing: 0) {
                 Button(action: {}, label: {
                     Image(systemName: "line.3.horizontal")
                         .font(.title)
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("black"))
                     
                 })
+                .frame(width: width / 3 - 30)
+//                .background(.yellow)
                 
                 Text("Explore")
 //                    .font(Font.custom("DancingScript-Bold", size: 40))
 //                    .font(Font.custom("BodoniModaSC_48pt-Medium", size: 40))
                     .font(Font.custom("PlayfairDisplay-Bold", size: 40))
 //                    .textCase(.uppercase)
+//                    .background(.pink)
+                    .frame(width: width / 3 + 60)
                 
-                Button(action: {
-                    if favouriteState == "heart" {
-                        favouriteState = "heart.fill"
-                    } else {
-                        favouriteState = "heart"
-                    }
-                }, label: {
-                    Image(systemName: favouriteState)
-                        .font(.title)
-                        .foregroundColor(.black)
+                HStack {
+                    Button(action: {
+                        viewModel.sortFavs()
+                    }, label: {
+                        Image(systemName: viewModel.showingFavs ? "heart.fill" : "heart")
+                            .font(.title)
+                            .foregroundColor(Color("black"))
+                        
+                    })
                     
-                })
+                    Button(action: {
+                        isDarkMode.toggle()
+                    }, label: {
+                        Image(systemName: isDarkMode ? "sun.max" : "moon.fill")
+                            .font(.title)
+                            .foregroundColor(Color("black"))
+        
+                    })
+                    
+                }
+                .frame(width: width / 3 - 30)
+//                .background(.blue)
             }
-//        }
+//            .background(.gray)
+            .frame(width: width)
+        }
+        .frame(height: 50)
     }
 }
 
@@ -52,5 +77,6 @@ enum FavouriteState: String {
 }
 
 #Preview {
-    NavigationBar()
+//    NavigationBar()
+    Test()
 }

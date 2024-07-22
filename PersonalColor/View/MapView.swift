@@ -10,15 +10,12 @@ import MapKit
 import SwiftUI
 
 struct MapView: View {
-    @ObservedObject var viewModel: CurrentPersonalColor
-
-//    var coordinate: CLLocationCoordinate2D
-    var product: Product
-    
+    @ObservedObject var viewModel: ViewModel
     @State private var region = MKCoordinateRegion()
-    
     @State private var cameraPosition: MapCameraPosition = .automatic
     @State private var seeDetail: Bool = false
+    
+    var product: Product
 
     var body: some View {
 //        Map(coordinateRegion: $region, annotationItems: contacts,
@@ -45,7 +42,7 @@ struct MapView: View {
 
 
             HStack {
-                Text("702 Nguyen Van Linh Street")
+                Text(product.address)
                     .font(Font.custom("Fustat-Light", size: 18))
                     .frame(width: 300, alignment: .leading)
                 
@@ -67,9 +64,10 @@ struct MapView: View {
                         if seeDetail {
                             Text(product.address)
                                 .font(Font.custom("Fustat-Light", size: 10))
+                                .foregroundColor(Color("white"))
                                 .background {
                                     RoundedRectangle(cornerRadius: 25.0)
-                                        .foregroundColor(.white)
+                                        .foregroundColor(Color(viewModel.colorGroup.color))
                                         .frame(width: 100, height: 100)
                                 }
                                 .offset(x: 70, y: 35)
