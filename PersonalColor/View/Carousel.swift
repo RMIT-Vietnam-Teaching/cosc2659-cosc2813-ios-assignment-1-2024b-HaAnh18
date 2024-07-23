@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct Carousel: View {
-//    @State private var pickerType: TripPicker = .normal
     @State private var activeID: Int?
-//    @State private var activeCategory: Category? = categories[categories.count / 2]
 
     @ObservedObject var viewModel: ViewModel
     var body: some View {
@@ -18,7 +16,6 @@ struct Carousel: View {
             GeometryReader {
                 let size = $0.size
                 let padding = (size.width - 100) / 2
-                let middleIndex = personalColors.count / 2
   
                 ScrollViewReader { scrollProxy in
                     ScrollView(.horizontal, showsIndicators: false) {
@@ -94,5 +91,5 @@ struct Carousel: View {
 
 #Preview {
 //    Carousel()
-    Test()
+    WelcomeView()
 }

@@ -47,6 +47,7 @@ struct ShortDescription: View {
         HStack {
             Text(product.name)
                 .font(Font.custom("PlayfairDisplay-Bold", size: 25))
+                .frame(height: 20)
             
             Spacer()
             
@@ -57,6 +58,7 @@ struct ShortDescription: View {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
             }
+            .frame(height: 20)
         }
         .padding(.horizontal, 20)
 
@@ -100,8 +102,9 @@ struct ShortDescription: View {
         HStack(spacing: 10) {
             Text("Address:")
                 .font(Font.custom("Fustat-Bold", size: 18))
+                .frame(alignment: .top)
 
-            Text(product.address)
+            Text(product.offlineStore ? product.address : "Online Store Only in Vietnam")
                 .font(Font.custom("Fustat-Light", size: 18))
 
             Spacer()
@@ -113,5 +116,6 @@ struct ShortDescription: View {
 
 #Preview {
 //    Detail()
-    Test()
+//    Test()
+    WelcomeView()
 }

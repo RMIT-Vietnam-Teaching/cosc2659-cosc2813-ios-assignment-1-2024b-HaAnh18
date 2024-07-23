@@ -12,32 +12,23 @@ struct NavigationBar: View {
     @ObservedObject var viewModel: ViewModel
     @Binding var isDarkMode: Bool
 
+    @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
+
     var body: some View {
-//        ZStack {
-//            Color(.blue)
-//                .ignoresSafeArea()
-            
-            
-//        }
-        
         GeometryReader { geo in
             let width = geo.size.width
             HStack(spacing: 0) {
-                Button(action: {}, label: {
-                    Image(systemName: "line.3.horizontal")
+                Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    Image(systemName: "house")
                         .font(.title)
                         .foregroundColor(Color("black"))
                     
                 })
                 .frame(width: width / 3 - 30)
-//                .background(.yellow)
-                
-                Text("Explore")
-//                    .font(Font.custom("DancingScript-Bold", size: 40))
-//                    .font(Font.custom("BodoniModaSC_48pt-Medium", size: 40))
+                Text("Aoife")
                     .font(Font.custom("PlayfairDisplay-Bold", size: 40))
-//                    .textCase(.uppercase)
-//                    .background(.pink)
                     .frame(width: width / 3 + 60)
                 
                 HStack {
@@ -53,30 +44,23 @@ struct NavigationBar: View {
                     Button(action: {
                         isDarkMode.toggle()
                     }, label: {
-                        Image(systemName: isDarkMode ? "sun.max" : "moon.fill")
+                        Image(systemName: isDarkMode ? "sun.max" : "moon")
                             .font(.title)
                             .foregroundColor(Color("black"))
         
                     })
-                    
                 }
                 .frame(width: width / 3 - 30)
-//                .background(.blue)
             }
-//            .background(.gray)
             .frame(width: width)
         }
-        .frame(height: 50)
+        
     }
-}
-
-
-enum FavouriteState: String {
-    case favourite = "favourite"
-    case normal = "heart"
+    
 }
 
 #Preview {
 //    NavigationBar()
-    Test()
+//    Test()
+    WelcomeView()
 }

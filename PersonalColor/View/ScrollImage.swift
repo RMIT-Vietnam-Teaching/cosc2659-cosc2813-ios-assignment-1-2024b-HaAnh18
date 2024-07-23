@@ -24,7 +24,7 @@ struct ScrollImage: View {
                             .scrollTransition(.interactive, axis: .horizontal) {
                                 view, phase in
                                 view
-                                    .scaleEffect(phase.isIdentity ? 1.2 : 0.75)
+                                    .scaleEffect(phase.isIdentity ? 1 : 0.4)
 //
                             }
                     }
@@ -44,5 +44,6 @@ struct ScrollImage: View {
 
 #Preview {
 //    ScrollImage()
-    Test()
+//    Test()
+    WelcomeView()
 }

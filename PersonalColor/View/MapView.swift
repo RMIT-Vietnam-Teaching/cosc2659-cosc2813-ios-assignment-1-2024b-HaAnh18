@@ -31,23 +31,28 @@ struct MapView: View {
 //            }
         
 //
-        VStack {
-            HStack {
-                Text("\(product.brand) Store: ")
-                    .font(Font.custom("Fustat-Bold", size: 18))
-                    .frame(width: 300, alignment: .leading)
-                
-                Spacer()
-            }
+        VStack(spacing: 15){
+            VStack {
+                HStack {
+                    Text("\(product.brand) Store: ")
+                        .font(Font.custom("Fustat-Bold", size: 18))
+                    
+                    Spacer()
+                }
 
 
-            HStack {
-                Text(product.address)
-                    .font(Font.custom("Fustat-Light", size: 18))
-                    .frame(width: 300, alignment: .leading)
-                
-                Spacer()
+
+                HStack {
+                    Text(product.address)
+                        .font(Font.custom("Fustat-Light", size: 18))
+                        .frame(width: 350, alignment: .leading)
+                    
+                    Spacer()
+                }
+                .padding(.horizontal, 20)
+
             }
+            .padding(.top, 100)
             
             Map(position: $cameraPosition) {
                 Annotation("\(product.brand) Store", coordinate: product.locationCoordinate, content: {
@@ -62,16 +67,22 @@ struct MapView: View {
                         })
                         
                         if seeDetail {
-                            Text(product.address)
+                            VStack {
+                                Text("\(product.brand) Store")
+                                    .font(Font.custom("Fustat-Bold", size: 16))
+
+                                Text(product.address)
+                                    .font(Font.custom("Fustat-Light", size: 14))
+                            }
                                 .font(Font.custom("Fustat-Light", size: 10))
                                 .foregroundColor(Color("white"))
                                 .background {
                                     RoundedRectangle(cornerRadius: 25.0)
-                                        .foregroundColor(Color(viewModel.colorGroup.color))
-                                        .frame(width: 100, height: 100)
+                                        .foregroundColor(Color("spring").opacity(0.8))
+                                        .frame(width: 200, height: 70)
                                 }
-                                .offset(x: 70, y: 35)
-                                .frame(width: 100, alignment: .top)
+                                .offset(x: -40, y: -55)
+                                .frame(width: 200, alignment: .top)
                         }
                     }
                 })
@@ -82,12 +93,13 @@ struct MapView: View {
                 }
                 .frame(width: 300, height: 300)
                 .clipShape(RoundedRectangle(cornerRadius: 25.0))
+            
+//            Spacer()
         }
         
         .padding(.horizontal, 20)
-        .padding(.top, 70)
 //        .background(.pink)
-        .frame(height: 500)
+        .frame(height: 600)
 
     }
         private func setRegion(_coordinate: CLLocationCoordinate2D) {
@@ -102,5 +114,5 @@ struct MapView: View {
 #Preview {
 //    MapView(coordinate: CLLocationCoordinate2DMake(10.7294109651741866, 106.69522548892152))
 //    TabViewStore()
-    Test()
+    WelcomeView()
 }

@@ -14,7 +14,7 @@ struct VideoView: View {
     
     var body: some View {
         let url = Bundle.main.url(forResource: product.video, withExtension: "mov")
-        
+//        
         VideoPlayer(player: AVPlayer(url: url!))
             .frame(width: 300, height: 300)
     }
@@ -22,5 +22,6 @@ struct VideoView: View {
 
 #Preview {
 //    VideoView()
-    Test()
+//    Test()
+    WelcomeView()
 }

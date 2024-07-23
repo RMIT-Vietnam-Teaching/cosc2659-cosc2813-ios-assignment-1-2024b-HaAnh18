@@ -32,5 +32,6 @@ struct CardList: View {
 #Preview {
 //    CardList(filterProducts: products)
 //    NavigationList()
-    Test()
+//    Test()
+    WelcomeView()
 }

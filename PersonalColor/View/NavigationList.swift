@@ -26,7 +26,7 @@ class ViewModel: ObservableObject {
         self.colorGroup = personalColors[0]
         self.productList = products
         self.showingFavs = false
-        self.favouriteProducts = [1]
+        self.favouriteProducts = []
     }
     
     func sortFavs() {
@@ -55,36 +55,35 @@ struct NavigationList: View {
     @State private var isFilter: Bool = false
     @Binding var isDarkMode: Bool
     
-    let filterOptions: [String] = ["All", "Palette", "Lipstick"]
+    let filterOptions: [String] = ["All", "Palette", "Blush", "Lipstick"]
 
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
             Color(viewModel.colorGroup.backgroundColor)
                 .ignoresSafeArea()
 
+            NavigationBar(viewModel: viewModel, isDarkMode: $isDarkMode)
             
             ScrollView {
                 VStack(spacing: 20) {
-                    NavigationBar(viewModel: viewModel, isDarkMode: $isDarkMode)
                     
                     Carousel(viewModel: viewModel)
                                                             
                     Text(viewModel.colorGroup.name)
                         .font(Font.custom("DancingScript-Bold", size: 60))
                         .foregroundColor(Color(viewModel.colorGroup.color))
-//                        .background(.white)
                     
                     ZStack(alignment: .top) {
                         CardList(viewModel: viewModel, isDarkMode: $isDarkMode, filterProducts: viewModel.filteredProducts)
                             .padding(.top, 70)
-                        .onAppear{
-                            filterProducts()
-                        }
-                        .onChange(of: viewModel.colorGroup, initial: true, {
-                            filterProducts()
-                        })
+                            .onAppear{
+                                filterProducts()
+                            }
+                            .onChange(of: viewModel.colorGroup, initial: true, {
+                                filterProducts()
+                            })
                         
-                        FilterView(isFilter: $isFilter, colorGroup: $viewModel.colorGroup, searchText: $searchText, filter: $filter)
+                        FilterView(isFilter: $isFilter, colorGroup: $viewModel.colorGroup, searchText: $searchText, filter: $filter, filterFunction: filterProducts)
                             .overlay(content: {
                                 if isFilter {
                                     ZStack(alignment: .top) {
@@ -104,11 +103,13 @@ struct NavigationList: View {
                                                     Text(name)
                                                         .font(Font.custom(filter == name ? "Fustat-Bold" : "Fustat-Light", size: 18))
                                                         .foregroundColor(Color(viewModel.colorGroup.color))
+                                                        .frame(alignment: .topLeading)
+                                                        .multilineTextAlignment(.leading)
                                                 })
                                                 .frame(width: 100, alignment: .leading)
-                                                .padding(.horizontal, 10)
                                                 .padding(.vertical, 5)
-                                            })
+                                            }
+                                            )
                                         }
                                         .padding(.top, 20)
                                         
@@ -119,7 +120,8 @@ struct NavigationList: View {
                     }
                 }
             }
-           
+            .padding(.top, 70)
+            .toolbar(.hidden)
         }
         
     }
@@ -128,9 +130,17 @@ struct NavigationList: View {
         viewModel.productList = products.filter { product in
             return product.personalColor == viewModel.colorGroup.name
         }
+        
         if filter != "All" && filter != "" {
             viewModel.productList = viewModel.productList.filter { product in
-                return product.category == filter
+                return product.category.contains(filter)
+            }
+        }
+        
+        if searchText != "" {
+            viewModel.productList = viewModel.productList.filter { product in
+                return product.name.contains(searchText) || product.brand.contains(searchText) ||
+                product.category.contains(searchText)
             }
         }
             
@@ -142,6 +152,8 @@ struct FilterView: View {
     @Binding var colorGroup: PersonalColor
     @Binding var searchText: String
     @Binding var filter: String
+    
+    let filterFunction: () -> Void
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -161,13 +173,15 @@ struct FilterView: View {
                     
                     TextField("Search", text: $searchText)
                         .foregroundColor(Color(colorGroup.color))
+                        .onChange(of: searchText, initial: true) { _, newValue in
+                            filterFunction()
+                        }
                 }
                 .padding(.horizontal, 10)
                 .padding(.vertical, 10)
                 .background(
                     Capsule()
                         .strokeBorder(Color(colorGroup.color),lineWidth: 0.8)
-//                                            .background(Color.blue)
                     )
             }
             .padding(.horizontal, 20)
@@ -178,5 +192,6 @@ struct FilterView: View {
 
 #Preview {
 //    NavigationList()
-    Test()
+//    Test()
+    WelcomeView()
 }

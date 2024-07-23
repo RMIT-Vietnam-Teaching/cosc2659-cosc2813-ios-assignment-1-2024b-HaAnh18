@@ -11,12 +11,12 @@ import CoreLocation
 struct Product: Identifiable, Codable {
     var id: Int
     var images: [String]
-    var favourite: Bool
     var name: String
     var reviewStar: Double
     var brand: String
     var category: String
     var personalColor: String
+    var offlineStore: Bool
     var address: String
     var description: String
     var coordinates: Coordinates

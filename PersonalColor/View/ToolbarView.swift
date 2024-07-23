@@ -37,19 +37,17 @@ struct ToolbarView: View {
                     .frame(width: width / 3 + 100)
                 
                 HStack {
-                    Button(action: {
-                        viewModel.sortFavs()
-                    }, label: {
-                        Image(systemName: viewModel.showingFavs ? "heart.fill" : "heart")
-                            .font(.title)
-                            .foregroundColor(Color("black"))
-                        
-                    })
+                    Image(systemName: viewModel.contains(product) ? "heart.fill" : "heart")
+                        .font(.title)
+                        .foregroundColor(Color("black"))
+                        .onTapGesture {
+                            viewModel.toggleFav(product: product)
+                        }
                     
                     Button(action: {
                         isDarkMode.toggle()
                     }, label: {
-                        Image(systemName: isDarkMode ? "sun.max" : "moon.fill")
+                        Image(systemName: isDarkMode ? "sun.max" : "moon")
                             .font(.title)
                             .foregroundColor(Color("black"))
         
@@ -71,5 +69,6 @@ struct ToolbarView: View {
 
 #Preview {
 //    ToolbarView()
-    Test()
+//    Test()
+    WelcomeView()
 }

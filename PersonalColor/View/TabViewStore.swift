@@ -23,7 +23,6 @@ struct TabViewStore: View {
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             
-            
             TabBarView(viewModel: viewModel, currentTab: self.$currentTab)
         }
         .frame(height: 450)
@@ -59,7 +58,7 @@ struct TabBarItems: View {
         }, label: {
             VStack {
                 Text(tabBarItemName)
-                    .font(Font.custom("Fustat-Light", size: 18))
+                    .font(Font.custom(currentTab == tab ? "Fustat-Bold" : "Fustat-Light", size: 18))
                     .foregroundColor(currentTab == tab ? Color(viewModel.colorGroup.color) : Color("black"))
 
                 if currentTab == tab {
@@ -80,5 +79,6 @@ struct TabBarItems: View {
 #Preview {
 //    TabViewStore()
 //    Detail()
-    Test()
+//    Test()
+    WelcomeView()
 }

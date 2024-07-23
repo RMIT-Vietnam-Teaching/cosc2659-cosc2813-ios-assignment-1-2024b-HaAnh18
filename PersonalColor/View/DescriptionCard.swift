@@ -13,29 +13,24 @@ struct DescriptionCard: View {
     
     var body: some View {
         VStack(spacing: 10) {
-//            Text("Description")
-//                .font(Font.custom("PlayfairDisplay-Bold", size: 25))
-////                .font(Font.custom("DancingScript-Bold", size: 45))
+            //            Text("Description")
+            //                .font(Font.custom("PlayfairDisplay-Bold", size: 25))
+            ////                .font(Font.custom("DancingScript-Bold", size: 45))
             Text("Description")
                 .font(Font.custom("PlayfairDisplay-Bold", size: 25))
-                .padding(.top, 50)
+                .padding(.top, 35)
                 .foregroundColor(Color("white"))
-        
+            
             Text(product.description)
                 .padding(.horizontal, 60)
-                .padding(.bottom, 60)
+                .padding(.bottom, 35)
                 .minimumScaleFactor(0.5)
-//                .background(.yellow)
                 .foregroundColor(Color("white"))
-                .font(Font.custom("Fustat-Light", size: 18))
-               
-            
-//            .frame(width: 400)
+                .font(Font.custom("Fustat-Light", size: 16))
         }
         .frame(width: 400)
         .background(content: {
             RoundedRectangle(cornerRadius: 25.0)
-//                        .foregroundColor(Color("spring"))
                 .stroke(Color("black"), lineWidth: 1.0)
                 .rotationEffect(.degrees(10))
                 .padding()
@@ -47,18 +42,16 @@ struct DescriptionCard: View {
                 .frame(width: 350)
             
             RoundedRectangle(cornerRadius: 25.0)
-//                        .foregroundColor(Color("spring"))
                 .stroke(Color("black"), lineWidth: 1.0)
                 .rotationEffect(.degrees(-10))
                 .padding()
                 .frame(width: 355)
-            
-            
         })
     }
 }
 
 #Preview {
 //    DescriptionCard()
-    Test()
+//    Test()
+    WelcomeView()
 }
