@@ -116,7 +116,8 @@ struct OnlineStore: View {
 }
 
 #Preview {
-//    OnlineStore()
-//    TabViewStore()
-    WelcomeView()
+    OnlineStore(product: products[0])
 }
+
+
+

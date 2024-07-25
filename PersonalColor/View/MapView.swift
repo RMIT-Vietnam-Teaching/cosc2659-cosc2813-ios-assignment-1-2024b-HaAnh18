@@ -111,8 +111,10 @@ struct MapView: View {
     
 }
 
-#Preview {
-//    MapView(coordinate: CLLocationCoordinate2DMake(10.7294109651741866, 106.69522548892152))
-//    TabViewStore()
-    WelcomeView()
+struct MapView_Previews: PreviewProvider {
+    @StateObject static var viewModel = ViewModel()
+
+    static var previews: some View {
+        MapView(viewModel: viewModel, product: products[0])
+    }
 }

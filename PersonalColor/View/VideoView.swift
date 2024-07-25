@@ -21,7 +21,7 @@ struct VideoView: View {
 }
 
 #Preview {
-//    VideoView()
-//    Test()
-    WelcomeView()
+    VideoView(product: products[0])
 }
+
+

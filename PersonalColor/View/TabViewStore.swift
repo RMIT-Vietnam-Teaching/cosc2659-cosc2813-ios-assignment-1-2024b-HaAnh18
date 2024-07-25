@@ -76,9 +76,10 @@ struct TabBarItems: View {
     }
 }
 
-#Preview {
-//    TabViewStore()
-//    Detail()
-//    Test()
-    WelcomeView()
+struct TabViewStore_Previews: PreviewProvider {
+    @StateObject static var viewModel = ViewModel()
+
+    static var previews: some View {
+        TabViewStore(viewModel: viewModel, product: products[0])
+    }
 }

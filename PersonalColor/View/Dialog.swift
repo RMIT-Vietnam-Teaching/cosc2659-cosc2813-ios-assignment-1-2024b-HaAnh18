@@ -78,6 +78,5 @@ struct Dialog: View {
 }
 
 #Preview {
-//    Dialog()
-    WelcomeView()
+    Dialog(showingAlert: .constant(true))
 }

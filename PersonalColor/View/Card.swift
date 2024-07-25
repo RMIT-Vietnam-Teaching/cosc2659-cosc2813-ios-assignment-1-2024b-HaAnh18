@@ -54,9 +54,10 @@ struct Card: View {
     }
 }
 
-#Preview {
-//    Card(product: products[0])
-//    CardList(filterProducts: products)
-//    Test()
-    WelcomeView()
+struct Card_Previews: PreviewProvider {
+    @StateObject static var viewModel = ViewModel()
+
+    static var previews: some View {
+        Card(viewModel: viewModel, product: products[0])
+    }
 }

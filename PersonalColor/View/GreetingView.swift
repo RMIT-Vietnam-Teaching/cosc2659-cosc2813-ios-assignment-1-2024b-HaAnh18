@@ -39,6 +39,7 @@ struct GreetingView: View {
 }
 
 #Preview {
-//    GreetingView(active: $false)
-    WelcomeView()
+    GreetingView()
 }
+
+

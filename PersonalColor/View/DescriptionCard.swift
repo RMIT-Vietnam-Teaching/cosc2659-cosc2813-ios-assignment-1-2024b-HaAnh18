@@ -50,8 +50,10 @@ struct DescriptionCard: View {
     }
 }
 
-#Preview {
-//    DescriptionCard()
-//    Test()
-    WelcomeView()
+struct DescriptionCard_Previews: PreviewProvider {
+    @StateObject static var viewModel = ViewModel()
+
+    static var previews: some View {
+        DescriptionCard(viewModel: viewModel, product: products[0])
+    }
 }

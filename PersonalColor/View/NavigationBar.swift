@@ -59,8 +59,10 @@ struct NavigationBar: View {
     
 }
 
-#Preview {
-//    NavigationBar()
-//    Test()
-    WelcomeView()
+struct NavigationBar_Previews: PreviewProvider {
+    @StateObject static var viewModel = ViewModel()
+
+    static var previews: some View {
+        NavigationBar(viewModel: viewModel, isDarkMode: .constant(false))
+    }
 }

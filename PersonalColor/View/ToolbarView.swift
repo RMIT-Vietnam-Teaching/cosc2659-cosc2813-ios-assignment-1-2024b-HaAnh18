@@ -44,14 +44,12 @@ struct ToolbarView: View {
                             viewModel.toggleFav(product: product)
                         }
                     
-                    Button(action: {
-                        isDarkMode.toggle()
-                    }, label: {
-                        Image(systemName: isDarkMode ? "sun.max" : "moon")
-                            .font(.title)
-                            .foregroundColor(Color("black"))
-        
-                    })
+                    Image(systemName: isDarkMode ? "sun.max" : "moon")
+                        .font(.title)
+                        .foregroundColor(Color("black"))
+                        .onTapGesture {
+                            isDarkMode.toggle()
+                        }
                     
                 }
                 .frame(width: width / 3 - 50)
@@ -67,8 +65,16 @@ struct ToolbarView: View {
     }
 }
 
-#Preview {
-//    ToolbarView()
-//    Test()
-    WelcomeView()
+//#Preview {
+////    ToolbarView()
+////    Test()
+//    WelcomeView()
+//}
+
+struct ToolbarView_Previews: PreviewProvider {
+    @StateObject static var viewModel = ViewModel()
+
+    static var previews: some View {
+        ToolbarView(viewModel: viewModel, isDarkMode: .constant(false), product: products[0])
+    }
 }

@@ -25,7 +25,6 @@ struct ScrollImage: View {
                                 view, phase in
                                 view
                                     .scaleEffect(phase.isIdentity ? 1 : 0.4)
-//
                             }
                     }
                 }
@@ -43,7 +42,5 @@ struct ScrollImage: View {
 }
 
 #Preview {
-//    ScrollImage()
-//    Test()
-    WelcomeView()
+    ScrollImage(images: products[0].images)
 }

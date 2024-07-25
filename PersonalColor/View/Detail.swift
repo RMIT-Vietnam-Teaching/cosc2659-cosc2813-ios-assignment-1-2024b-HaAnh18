@@ -51,12 +51,13 @@ struct ShortDescription: View {
             
             Spacer()
             
-            HStack(spacing: 5) {
+            HStack(alignment: .center, spacing: 5) {
                 Text("\(product.reviewStar, specifier: "%.1f")")    .font(Font.custom("Fustat-Light", size: 20))
                     .environment(\.locale, Locale(identifier: "en_US"))
 
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
+                    .offset(y:-3)
             }
             .frame(height: 20)
         }
@@ -114,8 +115,11 @@ struct ShortDescription: View {
     }
 }
 
-#Preview {
-//    Detail()
-//    Test()
-    WelcomeView()
+struct Detail_Previews: PreviewProvider {
+    @StateObject static var viewModel = ViewModel()
+
+    static var previews: some View {
+        Detail(viewModel: viewModel, isDarkMode: .constant(false), product: products[0])
+    }
 }
+

@@ -13,7 +13,7 @@ struct WelcomeView: View {
     @State var isWelcomeActive: Bool = true
 
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 GreetingView()
                 VStack(spacing: 50) {

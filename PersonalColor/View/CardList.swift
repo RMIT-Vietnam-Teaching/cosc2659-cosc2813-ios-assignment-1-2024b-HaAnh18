@@ -29,9 +29,10 @@ struct CardList: View {
     }
 }
 
-#Preview {
-//    CardList(filterProducts: products)
-//    NavigationList()
-//    Test()
-    WelcomeView()
+struct CardList_Previews: PreviewProvider {
+    @StateObject static var viewModel = ViewModel()
+
+    static var previews: some View {
+        CardList(viewModel: viewModel, isDarkMode: .constant(false), filterProducts: products)
+    }
 }

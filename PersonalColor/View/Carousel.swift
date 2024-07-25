@@ -88,8 +88,10 @@ struct Carousel: View {
     }
 }
 
+struct Carousel_Previews: PreviewProvider {
+    @StateObject static var viewModel = ViewModel()
 
-#Preview {
-//    Carousel()
-    WelcomeView()
+    static var previews: some View {
+        Carousel(viewModel: viewModel)
+    }
 }

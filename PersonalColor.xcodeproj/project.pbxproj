@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		393C1C412C5212BE00312305 /* VideoDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C1C402C5212BE00312305 /* VideoDemo.swift */; };
+		393C1C432C522B3200312305 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C1C422C522B3200312305 /* ViewModel.swift */; };
 		39B3837F2C466D6500002F23 /* PersonalColorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B3837E2C466D6500002F23 /* PersonalColorApp.swift */; };
 		39B383812C466D6500002F23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383802C466D6500002F23 /* ContentView.swift */; };
 		39B383832C466D6B00002F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39B383822C466D6B00002F23 /* Assets.xcassets */; };
@@ -69,6 +71,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		393C1C402C5212BE00312305 /* VideoDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDemo.swift; sourceTree = "<group>"; };
+		393C1C422C522B3200312305 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		39B3837B2C466D6500002F23 /* PersonalColor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalColor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B3837E2C466D6500002F23 /* PersonalColorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColorApp.swift; sourceTree = "<group>"; };
 		39B383802C466D6500002F23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 				39B383FA2C4F908D00002F23 /* WelcomeView.swift */,
 				39B383FC2C4F90A100002F23 /* GreetingView.swift */,
 				39B384082C4FFC3800002F23 /* Dialog.swift */,
+				393C1C402C5212BE00312305 /* VideoDemo.swift */,
+				393C1C422C522B3200312305 /* ViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -390,8 +396,10 @@
 				39B384092C4FFC3800002F23 /* Dialog.swift in Sources */,
 				39B383C02C4B99BA00002F23 /* TabViewStore.swift in Sources */,
 				39B383B02C46E44100002F23 /* CardList.swift in Sources */,
+				393C1C412C5212BE00312305 /* VideoDemo.swift in Sources */,
 				39B3839B2C46831B00002F23 /* PersonalColor.swift in Sources */,
 				39B383B22C46EBC500002F23 /* Detail.swift in Sources */,
+				393C1C432C522B3200312305 /* ViewModel.swift in Sources */,
 				39B3839F2C46B96F00002F23 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,6 +534,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PersonalColor/Preview Content\"";
+				DEVELOPMENT_TEAM = 87AJUFVFXW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PersonalColor/Info.plist;
@@ -555,6 +564,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PersonalColor/Preview Content\"";
+				DEVELOPMENT_TEAM = 87AJUFVFXW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PersonalColor/Info.plist;
