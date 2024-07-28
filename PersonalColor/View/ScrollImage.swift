@@ -4,6 +4,18 @@
 //
 //  Created by Nana on 17/7/24.
 //
+/*
+  RMIT University Vietnam
+  Course: COSC2659|COSC2813 iOS Development
+  Semester: 2024B
+  Assessment: Assignment 1
+  Author: Nguyen Tran Ha Anh
+  ID: s3938490
+  Created date: 17/07/2024
+  Last modified: 02/08/2024
+  Acknowledgement: Acknowledge the resources that you use here.
+    https://www.youtube.com/watch?v=3zBSgXoSugU
+ */
 
 import SwiftUI
 
@@ -31,8 +43,6 @@ struct ScrollImage: View {
                 .scrollTargetLayout()
                 .frame(height: 200)
                 .padding(.horizontal, size.width / 2 - 100)
-                
-//                .background(.blue)
             }
             .scrollTargetBehavior(.viewAligned)
             .scrollIndicators(.hidden)

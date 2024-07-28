@@ -4,13 +4,29 @@
 //
 //  Created by Nana on 22/7/24.
 //
+/*
+  RMIT University Vietnam
+  Course: COSC2659|COSC2813 iOS Development
+  Semester: 2024B
+  Assessment: Assignment 1
+  Author: Nguyen Tran Ha Anh
+  ID: s3938490
+  Created date: 22/07/2024
+  Last modified: 02/08/2024
+  Acknowledgement: Acknowledge the resources that you use here.
+    https://stackoverflow.com/questions/74527314/swiftui-how-to-remove-back-button-from-navigationlink-on-next-page
+*/
 
 import SwiftUI
 
 struct ToolbarView: View {
     @ObservedObject var viewModel: ViewModel
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
-    @Binding var isDarkMode: Bool
+//    @Binding var isDarkMode: Bool
+    @Binding var colorScheme: ColorScheme?
+    @Binding var appearanceMode: AppearanceMode
+    @State private var showingSheet = false
+    
     var product: Product
     
     var body: some View {
@@ -26,14 +42,9 @@ struct ToolbarView: View {
                         .foregroundColor(Color("black"))
                 })
                 .frame(width: width / 3 - 50)
-//                .background(.yellow)
                 
                 Text(product.name)
-//                    .font(Font.custom("DancingScript-Bold", size: 40))
-//                    .font(Font.custom("BodoniModaSC_48pt-Medium", size: 40))
                     .font(Font.custom("PlayfairDisplay-Bold", size: 20))
-//                    .textCase(.uppercase)
-//                    .background(.pink)
                     .frame(width: width / 3 + 100)
                 
                 HStack {
@@ -44,19 +55,29 @@ struct ToolbarView: View {
                             viewModel.toggleFav(product: product)
                         }
                     
-                    Image(systemName: isDarkMode ? "sun.max" : "moon")
-                        .font(.title)
-                        .foregroundColor(Color("black"))
-                        .onTapGesture {
-                            isDarkMode.toggle()
-                        }
+//                    Image(systemName: isDarkMode ? "sun.max" : "moon")
+//                        .font(.title)
+//                        .foregroundColor(Color("black"))
+//                        .onTapGesture {
+//                            isDarkMode.toggle()
+//                        }
+                    
+                    Button(action: {
+                        showingSheet.toggle()
+                    }, label: {
+                        Image(systemName: colorScheme == .dark ? "sun.max"  : colorScheme == .light ? "moon" : "gearshape")
+                            .font(.title)
+                            .foregroundColor(Color("black"))
+        
+                    })
+                    .sheet(isPresented: $showingSheet) {
+                        DarkLightMode(appearanceMode: $appearanceMode, showingSheet: $showingSheet, colorScheme: $colorScheme, viewModel: viewModel)
+                            .presentationDetents([.large, .medium, .fraction(0.35)])
+                    }
                     
                 }
                 .frame(width: width / 3 - 50)
-//                .background(.blue)
             }
-//            .background(.blue)
-//            .background(Color(viewModel.colorGroup.backgroundColor))
             .frame(width: width)
         }
         .frame(height: 45)
@@ -65,16 +86,11 @@ struct ToolbarView: View {
     }
 }
 
-//#Preview {
-////    ToolbarView()
-////    Test()
-//    WelcomeView()
-//}
-
 struct ToolbarView_Previews: PreviewProvider {
     @StateObject static var viewModel = ViewModel()
 
     static var previews: some View {
-        ToolbarView(viewModel: viewModel, isDarkMode: .constant(false), product: products[0])
+        ToolbarView(viewModel: viewModel, colorScheme: .constant(.light), appearanceMode: .constant(.light), product: products[0])
+//        ToolbarView(viewModel: viewModel, isDarkMode: .constant(false), product: products[0])
     }
 }

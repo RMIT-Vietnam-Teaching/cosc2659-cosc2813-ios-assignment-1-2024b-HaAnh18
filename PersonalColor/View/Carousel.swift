@@ -4,6 +4,18 @@
 //
 //  Created by Nana on 16/7/24.
 //
+/*
+  RMIT University Vietnam
+  Course: COSC2659|COSC2813 iOS Development
+  Semester: 2024B
+  Assessment: Assignment 1
+  Author: Nguyen Tran Ha Anh
+  ID: s3938490
+  Created date: 16/07/2024
+  Last modified: 02/08/2024
+  Acknowledgement: Acknowledge the resources that you use here.
+    https://www.youtube.com/watch?v=oI_zsmA_M3g&t=196s
+*/
 
 import SwiftUI
 
@@ -12,68 +24,45 @@ struct Carousel: View {
 
     @ObservedObject var viewModel: ViewModel
     var body: some View {
-        VStack {
-            GeometryReader {
-                let size = $0.size
-                let padding = (size.width - 100) / 2
-  
-                ScrollViewReader { scrollProxy in
-                    ScrollView(.horizontal, showsIndicators: false) {
-        
-                        HStack(spacing: 25) {
-                            ForEach(personalColors) { color in
-                                VStack {
-                                    Image(color.imageName)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fill)
-                                        .frame(width: 100, height: 100)
-//                                        .clipShape(.rect(cornerRadius: 15))
-                                                                    .clipShape(.circle)
-                                        .shadow(color: .black.opacity(0.15), radius: 5, x: 5, y: 5)
-                                        .visualEffect { view, proxy in
-
-                                            view
-                                                .offset(y: offset(proxy))
-                                        }
-                                        .scrollTransition(.interactive, axis: .horizontal) {
-                                            view, phase in
-                                            view
-                                                .scaleEffect(phase.isIdentity ? 1.2 : 0.75)
-//
-                                        }
-                                }
-//                                        .id(category.id)
-                                
+        GeometryReader {
+            let size = $0.size
+            let padding = (size.width - 100) / 2
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 25) {
+                    ForEach(personalColors) { color in
+                        Image(color.imageName)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 100, height: 100)
+                            .clipShape(.circle)
+                            .shadow(color: .black.opacity(0.15), radius: 5, x: 5, y: 5)
+                            .visualEffect { view, proxy in
+                                view
+                                    .offset(y: offset(proxy))
                             }
-                            
-                        }
-                        .scrollTargetLayout()
-                        .frame(height: 180)
-                        .offset(y: -30)
+                            .scrollTransition(.interactive, axis: .horizontal) {
+                                view, phase in
+                                view
+                                    .scaleEffect(phase.isIdentity ? 1.2 : 0.75)
+                            }
                     }
-//                    .onAppear(perform: {
-//                        DispatchQueue.main.async {
-//                            scrollProxy.scrollTo(viewModel.colorGroup.id, anchor: .center)
-//                            activeID = viewModel.colorGroup.id
-//                            viewModel.colorGroup = personalColors[viewModel.colorGroup.id]
-//                        }
-//                    })
-                    .onChange(of: activeID, initial: true) { _ ,newValue  in
-                        if let id = newValue {
-                            viewModel.colorGroup = personalColors.first(where: { $0.id == id })!
-                        }
-                    }
-                    .safeAreaPadding(.horizontal, padding)
-                    .scrollIndicators(.hidden)
-                    .scrollTargetBehavior(.viewAligned)
-                    .scrollPosition(id: $activeID)
-                    
                 }
-                
+                .scrollTargetLayout()
+                .frame(height: 180)
+                .offset(y: -30)
             }
-            .frame(height: 140)
+            .onChange(of: activeID, initial: true) { _ ,newValue  in
+                if let id = newValue {
+                    viewModel.colorGroup = personalColors.first(where: { $0.id == id })!
+                }
+            }
+            .safeAreaPadding(.horizontal, padding)
+            .scrollIndicators(.hidden)
+            .scrollTargetBehavior(.viewAligned)
+            .scrollPosition(id: $activeID)
         }
-        .ignoresSafeArea(.container,edges: .bottom)
+        .frame(height: 140)
     }
     
     nonisolated func offset(_ proxy: GeometryProxy) -> CGFloat {

@@ -4,13 +4,27 @@
 //
 //  Created by Nana on 17/7/24.
 //
+/*
+  RMIT University Vietnam
+  Course: COSC2659|COSC2813 iOS Development
+  Semester: 2024B
+  Assessment: Assignment 1
+  Author: Nguyen Tran Ha Anh
+  ID: s3938490
+  Created date: 17/07/2024
+  Last modified: 02/08/2024
+  Acknowledgement: Acknowledge the resources that you use here.
+    https://stackoverflow.com/questions/74527314/swiftui-how-to-remove-back-button-from-navigationlink-on-next-page
+*/
 
 import SwiftUI
 
 struct Detail: View {
     @ObservedObject var viewModel: ViewModel
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
-    @Binding var isDarkMode: Bool
+//    @Binding var isDarkMode: Bool
+    @Binding var colorScheme: ColorScheme?
+    @Binding var appearanceMode: AppearanceMode
     
     var product: Product
     
@@ -19,7 +33,8 @@ struct Detail: View {
             Color(viewModel.colorGroup.backgroundColor)
                 .ignoresSafeArea()
             
-            ToolbarView(viewModel: viewModel, isDarkMode: $isDarkMode, product: product)
+            ToolbarView(viewModel: viewModel, colorScheme: $colorScheme, appearanceMode: $appearanceMode, product: product)
+//            ToolbarView(viewModel: viewModel, isDarkMode: $isDarkMode, product: product)
                 .zIndex(1)
             
             ScrollView {
@@ -57,7 +72,7 @@ struct ShortDescription: View {
 
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
-                    .offset(y:-3)
+                    .offset(y: -3)
             }
             .frame(height: 20)
         }
@@ -119,7 +134,7 @@ struct Detail_Previews: PreviewProvider {
     @StateObject static var viewModel = ViewModel()
 
     static var previews: some View {
-        Detail(viewModel: viewModel, isDarkMode: .constant(false), product: products[0])
+        Detail(viewModel: viewModel, colorScheme: .constant(.light), appearanceMode: .constant(.light), product: products[0])
     }
 }
 

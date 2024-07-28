@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		393C1C412C5212BE00312305 /* VideoDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C1C402C5212BE00312305 /* VideoDemo.swift */; };
 		393C1C432C522B3200312305 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C1C422C522B3200312305 /* ViewModel.swift */; };
+		395709912C54F40B00ABDB2B /* DarkLightMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395709902C54F40B00ABDB2B /* DarkLightMode.swift */; };
 		39B3837F2C466D6500002F23 /* PersonalColorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B3837E2C466D6500002F23 /* PersonalColorApp.swift */; };
 		39B383812C466D6500002F23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383802C466D6500002F23 /* ContentView.swift */; };
 		39B383832C466D6B00002F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39B383822C466D6B00002F23 /* Assets.xcassets */; };
 		39B383862C466D6B00002F23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39B383852C466D6B00002F23 /* Preview Assets.xcassets */; };
-		39B3838E2C466DD900002F23 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B3838D2C466DD900002F23 /* Background.swift */; };
 		39B383942C4681ED00002F23 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383932C4681ED00002F23 /* NavigationBar.swift */; };
 		39B383972C46821800002F23 /* DancingScript-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39B383962C46821800002F23 /* DancingScript-Bold.ttf */; };
 		39B3839B2C46831B00002F23 /* PersonalColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B3839A2C46831B00002F23 /* PersonalColor.swift */; };
@@ -21,7 +20,6 @@
 		39B3839F2C46B96F00002F23 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B3839E2C46B96F00002F23 /* ModelData.swift */; };
 		39B383A12C46BB1400002F23 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383A02C46BB1400002F23 /* Carousel.swift */; };
 		39B383A32C46BD9500002F23 /* NavigationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383A22C46BD9500002F23 /* NavigationList.swift */; };
-		39B383A62C46BF1E00002F23 /* BodoniModaSC_48pt-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39B383A52C46BF1E00002F23 /* BodoniModaSC_48pt-Medium.ttf */; };
 		39B383A82C46BFF600002F23 /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39B383A72C46BFF600002F23 /* PlayfairDisplay-Regular.ttf */; };
 		39B383AA2C46C02F00002F23 /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39B383A92C46C02F00002F23 /* PlayfairDisplay-Bold.ttf */; };
 		39B383AC2C46E03E00002F23 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383AB2C46E03E00002F23 /* Card.swift */; };
@@ -37,48 +35,21 @@
 		39B383C42C4BB25000002F23 /* OnlineStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383C32C4BB25000002F23 /* OnlineStore.swift */; };
 		39B383C62C4C364C00002F23 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383C52C4C364C00002F23 /* Product.swift */; };
 		39B383C82C4C390800002F23 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 39B383C72C4C390800002F23 /* products.json */; };
-		39B383CC2C4D77F700002F23 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383CB2C4D77F700002F23 /* VideoView.swift */; };
-		39B383CF2C4D79E000002F23 /* berry-fuchsia-garden.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383CE2C4D79E000002F23 /* berry-fuchsia-garden.mov */; };
 		39B383D12C4DEF8900002F23 /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383D02C4DEF8900002F23 /* ToolbarView.swift */; };
-		39B383D32C4E1DAC00002F23 /* 23-summer-coral.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383D22C4E1DAC00002F23 /* 23-summer-coral.mov */; };
-		39B383D52C4E2CBA00002F23 /* dry-mango-tulip.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383D42C4E2CBA00002F23 /* dry-mango-tulip.mov */; };
-		39B383D72C4E2FC000002F23 /* fig-chip.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383D62C4E2FC000002F23 /* fig-chip.mov */; };
-		39B383D92C4E39C100002F23 /* red-grapefruit-pudding.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383D82C4E39C100002F23 /* red-grapefruit-pudding.mov */; };
-		39B383DB2C4E54B100002F23 /* mood-rose.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383DA2C4E54B100002F23 /* mood-rose.mov */; };
-		39B383DD2C4E562D00002F23 /* almond-coral.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383DC2C4E562D00002F23 /* almond-coral.mov */; };
-		39B383DF2C4E59E500002F23 /* coral-influencer.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383DE2C4E59E500002F23 /* coral-influencer.mov */; };
-		39B383E12C4E5CB000002F23 /* rose-in-mind.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383E02C4E5CB000002F23 /* rose-in-mind.mov */; };
-		39B383E32C4E608000002F23 /* lively-blurring.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383E22C4E608000002F23 /* lively-blurring.mov */; };
-		39B383E52C4E654F00002F23 /* 16-violet-knit.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383E42C4E654F00002F23 /* 16-violet-knit.mov */; };
-		39B383E72C4E67B800002F23 /* mauveful-nude.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383E62C4E67B800002F23 /* mauveful-nude.mov */; };
-		39B383E92C4E6C1C00002F23 /* bare-fig.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383E82C4E6C1C00002F23 /* bare-fig.mov */; };
-		39B383EB2C4E898700002F23 /* cool-membership.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383EA2C4E898700002F23 /* cool-membership.mov */; };
-		39B383ED2C4E8B0A00002F23 /* berry-smoothie.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383EC2C4E8B0A00002F23 /* berry-smoothie.mov */; };
-		39B383EF2C4E8EA000002F23 /* healthy-pink.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383EE2C4E8EA000002F23 /* healthy-pink.mov */; };
-		39B383F12C4E913100002F23 /* amber-neutrals.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383F02C4E913100002F23 /* amber-neutrals.mov */; };
-		39B383F32C4E953300002F23 /* no-standard.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383F22C4E953300002F23 /* no-standard.mov */; };
-		39B383F52C4E971D00002F23 /* rose-beige.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383F42C4E971D00002F23 /* rose-beige.mov */; };
-		39B383F72C4E9B0500002F23 /* rolling-in-the-autumn.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383F62C4E9B0400002F23 /* rolling-in-the-autumn.mov */; };
-		39B383F92C4E9D1100002F23 /* chocolate.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383F82C4E9D1100002F23 /* chocolate.mov */; };
 		39B383FB2C4F908D00002F23 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383FA2C4F908D00002F23 /* WelcomeView.swift */; };
 		39B383FD2C4F90A100002F23 /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383FC2C4F90A100002F23 /* GreetingView.swift */; };
-		39B383FF2C4FFA8B00002F23 /* chillin.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B383FE2C4FFA8B00002F23 /* chillin.mov */; };
-		39B384012C4FFAD700002F23 /* odi-milk.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B384002C4FFAD700002F23 /* odi-milk.mov */; };
-		39B384032C4FFB6800002F23 /* youth-pink.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B384022C4FFB6700002F23 /* youth-pink.mov */; };
-		39B384052C4FFBBE00002F23 /* touching-taro-star.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B384042C4FFBBE00002F23 /* touching-taro-star.mov */; };
-		39B384072C4FFC1900002F23 /* cool-pink.mov in Resources */ = {isa = PBXBuildFile; fileRef = 39B384062C4FFC1900002F23 /* cool-pink.mov */; };
 		39B384092C4FFC3800002F23 /* Dialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B384082C4FFC3800002F23 /* Dialog.swift */; };
+		39B711F62C56ADDE00C750C8 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B711F52C56ADDE00C750C8 /* VideoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		393C1C402C5212BE00312305 /* VideoDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDemo.swift; sourceTree = "<group>"; };
 		393C1C422C522B3200312305 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		395709902C54F40B00ABDB2B /* DarkLightMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkLightMode.swift; sourceTree = "<group>"; };
 		39B3837B2C466D6500002F23 /* PersonalColor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalColor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B3837E2C466D6500002F23 /* PersonalColorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColorApp.swift; sourceTree = "<group>"; };
 		39B383802C466D6500002F23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		39B383822C466D6B00002F23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39B383852C466D6B00002F23 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		39B3838D2C466DD900002F23 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		39B383932C4681ED00002F23 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		39B383962C46821800002F23 /* DancingScript-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-Bold.ttf"; sourceTree = "<group>"; };
 		39B383982C46826400002F23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -87,7 +58,6 @@
 		39B3839E2C46B96F00002F23 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		39B383A02C46BB1400002F23 /* Carousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		39B383A22C46BD9500002F23 /* NavigationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationList.swift; sourceTree = "<group>"; };
-		39B383A52C46BF1E00002F23 /* BodoniModaSC_48pt-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BodoniModaSC_48pt-Medium.ttf"; sourceTree = "<group>"; };
 		39B383A72C46BFF600002F23 /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		39B383A92C46C02F00002F23 /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		39B383AB2C46E03E00002F23 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -103,37 +73,11 @@
 		39B383C32C4BB25000002F23 /* OnlineStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineStore.swift; sourceTree = "<group>"; };
 		39B383C52C4C364C00002F23 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		39B383C72C4C390800002F23 /* products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
-		39B383CB2C4D77F700002F23 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
-		39B383CE2C4D79E000002F23 /* berry-fuchsia-garden.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "berry-fuchsia-garden.mov"; sourceTree = "<group>"; };
 		39B383D02C4DEF8900002F23 /* ToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarView.swift; sourceTree = "<group>"; };
-		39B383D22C4E1DAC00002F23 /* 23-summer-coral.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "23-summer-coral.mov"; sourceTree = "<group>"; };
-		39B383D42C4E2CBA00002F23 /* dry-mango-tulip.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "dry-mango-tulip.mov"; sourceTree = "<group>"; };
-		39B383D62C4E2FC000002F23 /* fig-chip.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "fig-chip.mov"; sourceTree = "<group>"; };
-		39B383D82C4E39C100002F23 /* red-grapefruit-pudding.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "red-grapefruit-pudding.mov"; sourceTree = "<group>"; };
-		39B383DA2C4E54B100002F23 /* mood-rose.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "mood-rose.mov"; sourceTree = "<group>"; };
-		39B383DC2C4E562D00002F23 /* almond-coral.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "almond-coral.mov"; sourceTree = "<group>"; };
-		39B383DE2C4E59E500002F23 /* coral-influencer.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "coral-influencer.mov"; sourceTree = "<group>"; };
-		39B383E02C4E5CB000002F23 /* rose-in-mind.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "rose-in-mind.mov"; sourceTree = "<group>"; };
-		39B383E22C4E608000002F23 /* lively-blurring.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "lively-blurring.mov"; sourceTree = "<group>"; };
-		39B383E42C4E654F00002F23 /* 16-violet-knit.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "16-violet-knit.mov"; sourceTree = "<group>"; };
-		39B383E62C4E67B800002F23 /* mauveful-nude.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "mauveful-nude.mov"; sourceTree = "<group>"; };
-		39B383E82C4E6C1C00002F23 /* bare-fig.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "bare-fig.mov"; sourceTree = "<group>"; };
-		39B383EA2C4E898700002F23 /* cool-membership.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "cool-membership.mov"; sourceTree = "<group>"; };
-		39B383EC2C4E8B0A00002F23 /* berry-smoothie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "berry-smoothie.mov"; sourceTree = "<group>"; };
-		39B383EE2C4E8EA000002F23 /* healthy-pink.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "healthy-pink.mov"; sourceTree = "<group>"; };
-		39B383F02C4E913100002F23 /* amber-neutrals.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "amber-neutrals.mov"; sourceTree = "<group>"; };
-		39B383F22C4E953300002F23 /* no-standard.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "no-standard.mov"; sourceTree = "<group>"; };
-		39B383F42C4E971D00002F23 /* rose-beige.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "rose-beige.mov"; sourceTree = "<group>"; };
-		39B383F62C4E9B0400002F23 /* rolling-in-the-autumn.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "rolling-in-the-autumn.mov"; sourceTree = "<group>"; };
-		39B383F82C4E9D1100002F23 /* chocolate.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = chocolate.mov; sourceTree = "<group>"; };
 		39B383FA2C4F908D00002F23 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		39B383FC2C4F90A100002F23 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
-		39B383FE2C4FFA8B00002F23 /* chillin.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = chillin.mov; sourceTree = "<group>"; };
-		39B384002C4FFAD700002F23 /* odi-milk.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "odi-milk.mov"; sourceTree = "<group>"; };
-		39B384022C4FFB6700002F23 /* youth-pink.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "youth-pink.mov"; sourceTree = "<group>"; };
-		39B384042C4FFBBE00002F23 /* touching-taro-star.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "touching-taro-star.mov"; sourceTree = "<group>"; };
-		39B384062C4FFC1900002F23 /* cool-pink.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "cool-pink.mov"; sourceTree = "<group>"; };
 		39B384082C4FFC3800002F23 /* Dialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialog.swift; sourceTree = "<group>"; };
+		39B711F52C56ADDE00C750C8 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +112,6 @@
 			children = (
 				39B383982C46826400002F23 /* Info.plist */,
 				39B383952C46820600002F23 /* Font */,
-				39B383CD2C4D79B000002F23 /* Video */,
 				39B383992C4682FE00002F23 /* Model */,
 				39B3838C2C466D8000002F23 /* View */,
 				39B3837E2C466D6500002F23 /* PersonalColorApp.swift */,
@@ -190,7 +133,6 @@
 		39B3838C2C466D8000002F23 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				39B3838D2C466DD900002F23 /* Background.swift */,
 				39B383932C4681ED00002F23 /* NavigationBar.swift */,
 				39B383A02C46BB1400002F23 /* Carousel.swift */,
 				39B383A22C46BD9500002F23 /* NavigationList.swift */,
@@ -202,13 +144,13 @@
 				39B383BD2C4933B600002F23 /* MapView.swift */,
 				39B383BF2C4B99BA00002F23 /* TabViewStore.swift */,
 				39B383C32C4BB25000002F23 /* OnlineStore.swift */,
-				39B383CB2C4D77F700002F23 /* VideoView.swift */,
 				39B383D02C4DEF8900002F23 /* ToolbarView.swift */,
 				39B383FA2C4F908D00002F23 /* WelcomeView.swift */,
 				39B383FC2C4F90A100002F23 /* GreetingView.swift */,
 				39B384082C4FFC3800002F23 /* Dialog.swift */,
-				393C1C402C5212BE00312305 /* VideoDemo.swift */,
 				393C1C422C522B3200312305 /* ViewModel.swift */,
+				395709902C54F40B00ABDB2B /* DarkLightMode.swift */,
+				39B711F52C56ADDE00C750C8 /* VideoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -222,7 +164,6 @@
 				39B383A92C46C02F00002F23 /* PlayfairDisplay-Bold.ttf */,
 				39B383A72C46BFF600002F23 /* PlayfairDisplay-Regular.ttf */,
 				39B383962C46821800002F23 /* DancingScript-Bold.ttf */,
-				39B383A52C46BF1E00002F23 /* BodoniModaSC_48pt-Medium.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -237,39 +178,6 @@
 				39B383C72C4C390800002F23 /* products.json */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		39B383CD2C4D79B000002F23 /* Video */ = {
-			isa = PBXGroup;
-			children = (
-				39B383DC2C4E562D00002F23 /* almond-coral.mov */,
-				39B383DA2C4E54B100002F23 /* mood-rose.mov */,
-				39B383D42C4E2CBA00002F23 /* dry-mango-tulip.mov */,
-				39B383FE2C4FFA8B00002F23 /* chillin.mov */,
-				39B383D22C4E1DAC00002F23 /* 23-summer-coral.mov */,
-				39B383CE2C4D79E000002F23 /* berry-fuchsia-garden.mov */,
-				39B384002C4FFAD700002F23 /* odi-milk.mov */,
-				39B384062C4FFC1900002F23 /* cool-pink.mov */,
-				39B383E22C4E608000002F23 /* lively-blurring.mov */,
-				39B384022C4FFB6700002F23 /* youth-pink.mov */,
-				39B383E42C4E654F00002F23 /* 16-violet-knit.mov */,
-				39B384042C4FFBBE00002F23 /* touching-taro-star.mov */,
-				39B383F02C4E913100002F23 /* amber-neutrals.mov */,
-				39B383DE2C4E59E500002F23 /* coral-influencer.mov */,
-				39B383EA2C4E898700002F23 /* cool-membership.mov */,
-				39B383E62C4E67B800002F23 /* mauveful-nude.mov */,
-				39B383F82C4E9D1100002F23 /* chocolate.mov */,
-				39B383E02C4E5CB000002F23 /* rose-in-mind.mov */,
-				39B383EE2C4E8EA000002F23 /* healthy-pink.mov */,
-				39B383EC2C4E8B0A00002F23 /* berry-smoothie.mov */,
-				39B383F42C4E971D00002F23 /* rose-beige.mov */,
-				39B383E82C4E6C1C00002F23 /* bare-fig.mov */,
-				39B383F62C4E9B0400002F23 /* rolling-in-the-autumn.mov */,
-				39B383D62C4E2FC000002F23 /* fig-chip.mov */,
-				39B383F22C4E953300002F23 /* no-standard.mov */,
-				39B383D82C4E39C100002F23 /* red-grapefruit-pudding.mov */,
-			);
-			path = Video;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,43 +238,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39B383F72C4E9B0500002F23 /* rolling-in-the-autumn.mov in Resources */,
-				39B383A62C46BF1E00002F23 /* BodoniModaSC_48pt-Medium.ttf in Resources */,
-				39B383D32C4E1DAC00002F23 /* 23-summer-coral.mov in Resources */,
-				39B383D52C4E2CBA00002F23 /* dry-mango-tulip.mov in Resources */,
-				39B383E72C4E67B800002F23 /* mauveful-nude.mov in Resources */,
-				39B384052C4FFBBE00002F23 /* touching-taro-star.mov in Resources */,
-				39B383F12C4E913100002F23 /* amber-neutrals.mov in Resources */,
-				39B384032C4FFB6800002F23 /* youth-pink.mov in Resources */,
-				39B383D92C4E39C100002F23 /* red-grapefruit-pudding.mov in Resources */,
 				39B383B42C47AF6B00002F23 /* Fustat-Light.ttf in Resources */,
-				39B383CF2C4D79E000002F23 /* berry-fuchsia-garden.mov in Resources */,
-				39B384072C4FFC1900002F23 /* cool-pink.mov in Resources */,
-				39B383F52C4E971D00002F23 /* rose-beige.mov in Resources */,
-				39B383ED2C4E8B0A00002F23 /* berry-smoothie.mov in Resources */,
-				39B383F32C4E953300002F23 /* no-standard.mov in Resources */,
-				39B383E52C4E654F00002F23 /* 16-violet-knit.mov in Resources */,
 				39B383BC2C492D8D00002F23 /* Fustat-Bold.ttf in Resources */,
-				39B383DB2C4E54B100002F23 /* mood-rose.mov in Resources */,
-				39B383EF2C4E8EA000002F23 /* healthy-pink.mov in Resources */,
 				39B383AA2C46C02F00002F23 /* PlayfairDisplay-Bold.ttf in Resources */,
-				39B383DD2C4E562D00002F23 /* almond-coral.mov in Resources */,
-				39B383EB2C4E898700002F23 /* cool-membership.mov in Resources */,
-				39B383E32C4E608000002F23 /* lively-blurring.mov in Resources */,
 				39B383972C46821800002F23 /* DancingScript-Bold.ttf in Resources */,
 				39B383A82C46BFF600002F23 /* PlayfairDisplay-Regular.ttf in Resources */,
-				39B383D72C4E2FC000002F23 /* fig-chip.mov in Resources */,
 				39B3839D2C46B93200002F23 /* personalColor.json in Resources */,
-				39B383FF2C4FFA8B00002F23 /* chillin.mov in Resources */,
-				39B383E92C4E6C1C00002F23 /* bare-fig.mov in Resources */,
 				39B383862C466D6B00002F23 /* Preview Assets.xcassets in Resources */,
 				39B383C82C4C390800002F23 /* products.json in Resources */,
 				39B383832C466D6B00002F23 /* Assets.xcassets in Resources */,
-				39B383DF2C4E59E500002F23 /* coral-influencer.mov in Resources */,
-				39B383E12C4E5CB000002F23 /* rose-in-mind.mov in Resources */,
 				39B383AE2C46E29100002F23 /* PTSerif-Bold.ttf in Resources */,
-				39B384012C4FFAD700002F23 /* odi-milk.mov in Resources */,
-				39B383F92C4E9D1100002F23 /* chocolate.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,22 +263,21 @@
 				39B383AC2C46E03E00002F23 /* Card.swift in Sources */,
 				39B383B62C47B21B00002F23 /* DescriptionCard.swift in Sources */,
 				39B3837F2C466D6500002F23 /* PersonalColorApp.swift in Sources */,
-				39B3838E2C466DD900002F23 /* Background.swift in Sources */,
 				39B383D12C4DEF8900002F23 /* ToolbarView.swift in Sources */,
 				39B383A32C46BD9500002F23 /* NavigationList.swift in Sources */,
 				39B383BE2C4933B600002F23 /* MapView.swift in Sources */,
 				39B383942C4681ED00002F23 /* NavigationBar.swift in Sources */,
 				39B383C42C4BB25000002F23 /* OnlineStore.swift in Sources */,
 				39B383C62C4C364C00002F23 /* Product.swift in Sources */,
-				39B383CC2C4D77F700002F23 /* VideoView.swift in Sources */,
 				39B383FD2C4F90A100002F23 /* GreetingView.swift in Sources */,
 				39B383FB2C4F908D00002F23 /* WelcomeView.swift in Sources */,
 				39B383A12C46BB1400002F23 /* Carousel.swift in Sources */,
 				39B384092C4FFC3800002F23 /* Dialog.swift in Sources */,
 				39B383C02C4B99BA00002F23 /* TabViewStore.swift in Sources */,
 				39B383B02C46E44100002F23 /* CardList.swift in Sources */,
-				393C1C412C5212BE00312305 /* VideoDemo.swift in Sources */,
+				395709912C54F40B00ABDB2B /* DarkLightMode.swift in Sources */,
 				39B3839B2C46831B00002F23 /* PersonalColor.swift in Sources */,
+				39B711F62C56ADDE00C750C8 /* VideoView.swift in Sources */,
 				39B383B22C46EBC500002F23 /* Detail.swift in Sources */,
 				393C1C432C522B3200312305 /* ViewModel.swift in Sources */,
 				39B3839F2C46B96F00002F23 /* ModelData.swift in Sources */,
@@ -459,7 +339,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -516,7 +396,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -534,21 +414,23 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PersonalColor/Preview Content\"";
-				DEVELOPMENT_TEAM = 87AJUFVFXW;
+				DEVELOPMENT_TEAM = D6G3S696T9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PersonalColor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Aoife;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.rmit.PersonalColor;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.rmit.nana.PersonalColor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -564,21 +446,23 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PersonalColor/Preview Content\"";
-				DEVELOPMENT_TEAM = 87AJUFVFXW;
+				DEVELOPMENT_TEAM = D6G3S696T9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PersonalColor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Aoife;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.rmit.PersonalColor;
+				PRODUCT_BUNDLE_IDENTIFIER = vn.edu.rmit.nana.PersonalColor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

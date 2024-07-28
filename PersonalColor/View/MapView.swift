@@ -4,6 +4,17 @@
 //
 //  Created by Nana on 18/7/24.
 //
+/*
+  RMIT University Vietnam
+  Course: COSC2659|COSC2813 iOS Development
+  Semester: 2024B
+  Assessment: Assignment 1
+  Author: Nguyen Tran Ha Anh
+  ID: s3938490
+  Created date: 18/07/2024
+  Last modified: 02/08/2024
+  Acknowledgement: Acknowledge the resources that you use here.
+ */
 
 import Foundation
 import MapKit
@@ -18,19 +29,6 @@ struct MapView: View {
     var product: Product
 
     var body: some View {
-//        Map(coordinateRegion: $region, annotationItems: contacts,
-//            annotationContent: { location in
-//            MapAnnotation(coordinate: coordinate, content: {
-//                Text("pin")
-//            })
-//        }
-//        )
-//
-//            .onAppear {
-//                setRegion(_coordinate: coordinate)
-//            }
-        
-//
         VStack(spacing: 15){
             VStack {
                 HStack {
@@ -39,9 +37,7 @@ struct MapView: View {
                     
                     Spacer()
                 }
-
-
-
+                
                 HStack {
                     Text(product.address)
                         .font(Font.custom("Fustat-Light", size: 18))
@@ -50,9 +46,8 @@ struct MapView: View {
                     Spacer()
                 }
                 .padding(.horizontal, 20)
-
+                
             }
-            .padding(.top, 100)
             
             Map(position: $cameraPosition) {
                 Annotation("\(product.brand) Store", coordinate: product.locationCoordinate, content: {
@@ -70,37 +65,35 @@ struct MapView: View {
                             VStack {
                                 Text("\(product.brand) Store")
                                     .font(Font.custom("Fustat-Bold", size: 16))
-
+                                
                                 Text(product.address)
                                     .font(Font.custom("Fustat-Light", size: 14))
                             }
-                                .font(Font.custom("Fustat-Light", size: 10))
-                                .foregroundColor(Color("white"))
-                                .background {
-                                    RoundedRectangle(cornerRadius: 25.0)
-                                        .foregroundColor(Color("spring").opacity(0.8))
-                                        .frame(width: 200, height: 70)
-                                }
-                                .offset(x: -40, y: -55)
-                                .frame(width: 200, alignment: .top)
+                            .font(Font.custom("Fustat-Light", size: 10))
+                            .foregroundColor(Color("white"))
+                            .background {
+                                RoundedRectangle(cornerRadius: 10.0)
+                                    .foregroundColor(Color("spring").opacity(0.8))
+                                    .frame(width: 200, height: 70)
+                            }
+                            .offset(x: -40, y: -55)
+                            .frame(width: 200, alignment: .top)
                         }
                     }
                 })
             }
-                .onAppear{
-                    setRegion(_coordinate: product.locationCoordinate)
-                    cameraPosition = .region(region)
-                }
-                .frame(width: 300, height: 300)
-                .clipShape(RoundedRectangle(cornerRadius: 25.0))
+            .onAppear{
+                setRegion(_coordinate: product.locationCoordinate)
+                cameraPosition = .region(region)
+            }
+            .frame(width: 300, height: 300)
+            .clipShape(RoundedRectangle(cornerRadius: 25.0))
             
-//            Spacer()
+            Spacer()
         }
-        
         .padding(.horizontal, 20)
-//        .background(.pink)
+        .padding(.top, 120)
         .frame(height: 600)
-
     }
         private func setRegion(_coordinate: CLLocationCoordinate2D) {
             region = MKCoordinateRegion(
@@ -108,13 +101,16 @@ struct MapView: View {
                 span: MKCoordinateSpan(latitudeDelta: 0.006, longitudeDelta: 0.006)
             )
         }
-    
 }
 
 struct MapView_Previews: PreviewProvider {
     @StateObject static var viewModel = ViewModel()
 
     static var previews: some View {
-        MapView(viewModel: viewModel, product: products[0])
+        TabViewStore(viewModel: viewModel, product: products[0])
+
+//        MapView(viewModel: viewModel, product: products[0])
     }
 }
+
+

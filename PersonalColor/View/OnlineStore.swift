@@ -4,12 +4,22 @@
 //
 //  Created by Nana on 20/7/24.
 //
+/*
+  RMIT University Vietnam
+  Course: COSC2659|COSC2813 iOS Development
+  Semester: 2024B
+  Assessment: Assignment 1
+  Author: Nguyen Tran Ha Anh
+  ID: s3938490
+  Created date: 20/07/2024
+  Last modified: 02/08/2024
+  Acknowledgement: Acknowledge the resources that you use here.
+ */
 
 import SwiftUI
 
 struct OnlineStore: View {
     var product: Product
-//    let urlString = "https://www.example.com"
     
     var body: some View {
 
@@ -106,12 +116,11 @@ struct OnlineStore: View {
                     }
                 }
             }
-            
             Spacer()
             
         }
-        .padding(.top, 80)
-        .frame(height: 450)
+        .padding(.top, 120)
+        .frame(height: 600)
     }
 }
 

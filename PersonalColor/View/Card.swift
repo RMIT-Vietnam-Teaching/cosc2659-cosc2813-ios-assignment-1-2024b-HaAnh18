@@ -4,6 +4,17 @@
 //
 //  Created by Nana on 17/7/24.
 //
+/*
+  RMIT University Vietnam
+  Course: COSC2659|COSC2813 iOS Development
+  Semester: 2024B
+  Assessment: Assignment 1
+  Author: Nguyen Tran Ha Anh
+  ID: s3938490
+  Created date: 17/07/2024
+  Last modified: 02/08/2024
+  Acknowledgement: Acknowledge the resources that you use here.
+*/
 
 import SwiftUI
 
@@ -16,7 +27,6 @@ struct Card: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 25.0)
                     .foregroundColor(.white)
-//                        .stroke(lineWidth: 1.0)
                     .frame(width: 150, height: 150)
                 
                 Image(product.images[0])
@@ -38,13 +48,14 @@ struct Card: View {
             
             VStack {
                 Text(product.name)
-                    .font(Font.custom("PTSerif-Bold", size: 18))
+                    .font(Font.custom("PlayfairDisplay-Bold", size: 18))
                     .frame(width: 170, alignment: .top)
                     .foregroundColor(Color("black"))
                     .padding(.horizontal, -20)
 
                 
                 Text(product.brand)
+                    .font(Font.custom("Fustat-Light", size: 18))
                     .frame(width: 150, alignment: .top)
                     .foregroundColor(Color("black"))
 

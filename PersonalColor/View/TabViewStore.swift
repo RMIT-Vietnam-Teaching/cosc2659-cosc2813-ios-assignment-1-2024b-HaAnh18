@@ -4,6 +4,18 @@
 //
 //  Created by Nana on 20/7/24.
 //
+/*
+  RMIT University Vietnam
+  Course: COSC2659|COSC2813 iOS Development
+  Semester: 2024B
+  Assessment: Assignment 1
+  Author: Nguyen Tran Ha Anh
+  ID: s3938490
+  Created date: 20/07/2024
+  Last modified: 02/08/2024
+  Acknowledgement: Acknowledge the resources that you use here.
+    https://www.youtube.com/watch?v=RPCTAv_e2kA
+ */
 
 import SwiftUI
 import MapKit
@@ -19,13 +31,14 @@ struct TabViewStore: View {
             TabView(selection: self.$currentTab) {
                 MapView(viewModel: viewModel, product: product).tag(0)
                 OnlineStore(product: product).tag(1)
+//                VideoDemo().tag(2)
                 VideoView(product: product).tag(2)
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             
             TabBarView(viewModel: viewModel, currentTab: self.$currentTab)
         }
-        .frame(height: 450)
+        .frame(height: 500)
     }
 }
 
@@ -70,7 +83,6 @@ struct TabBarItems: View {
                         .frame(height: 1)
                 }
             }
-//            .frame(width: 150)
             .animation(.spring(), value: self.currentTab)
         })
     }

@@ -4,6 +4,18 @@
 //
 //  Created by Nana on 16/7/24.
 //
+/*
+  RMIT University Vietnam
+  Course: COSC2659|COSC2813 iOS Development
+  Semester: 2024B
+  Assessment: Assignment 1
+  Author: Nguyen Tran Ha Anh
+  ID: s3938490
+  Created date: 16/07/2024
+  Last modified: 02/08/2024
+  Acknowledgement: Acknowledge the resources that you use here.
+    https://www.youtube.com/watch?v=oI_zsmA_M3g&t=196s
+*/
 
 import SwiftUI
 
@@ -12,8 +24,10 @@ struct NavigationList: View {
     @State private var searchText:String = ""
     @State private var filter: String = "All"
     @State private var isFilter: Bool = false
-    @Binding var isDarkMode: Bool
-    
+//    @Binding var isDarkMode: Bool
+    @Binding var colorScheme: ColorScheme?
+    @Binding var appearanceMode: AppearanceMode
+
     let filterOptions: [String] = ["All", "Palette", "Blush", "Lipstick"]
 
     var body: some View {
@@ -21,7 +35,7 @@ struct NavigationList: View {
             Color(viewModel.colorGroup.backgroundColor)
                 .ignoresSafeArea()
 
-            NavigationBar(viewModel: viewModel, isDarkMode: $isDarkMode)
+            NavigationBar(viewModel: viewModel, colorScheme: $colorScheme, appearanceMode: $appearanceMode)
             
             ScrollView {
                 VStack(spacing: 20) {
@@ -33,7 +47,7 @@ struct NavigationList: View {
                         .foregroundColor(Color(viewModel.colorGroup.color))
                     
                     ZStack(alignment: .top) {
-                        CardList(viewModel: viewModel, isDarkMode: $isDarkMode, filterProducts: viewModel.filteredProducts)
+                        CardList(viewModel: viewModel, colorScheme: $colorScheme, appearanceMode: $appearanceMode, filterProducts: viewModel.filteredProducts)
                             .padding(.top, 70)
                             .onAppear{
                                 filterProducts()
@@ -47,7 +61,7 @@ struct NavigationList: View {
                                 if isFilter {
                                     ZStack(alignment: .top) {
                                         RoundedRectangle(cornerRadius: 25.0)
-                                            .frame(width: 150, height: 200)
+                                            .frame(width: 150)
                                             .foregroundColor(Color(viewModel.colorGroup.backgroundColor))
                                             .shadow(color: Color(viewModel.colorGroup.color).opacity(0.3) ,radius: 2)
                                             .padding(.horizontal, 10)
@@ -70,10 +84,9 @@ struct NavigationList: View {
                                             }
                                             )
                                         }
-                                        .padding(.top, 20)
-                                        
+                                        .padding(.vertical, 5)
                                     }
-                                    .offset(x: -110, y: 130)
+                                    .offset(x: -110, y: 110)
                                 }
                             })
                     }
@@ -123,7 +136,6 @@ struct FilterView: View {
                     Image(systemName: "line.3.horizontal")
                         .font(.title)
                         .foregroundColor(Color(colorGroup.color))
-                    
                 })
                 
                 HStack(spacing: 12) {
@@ -146,10 +158,9 @@ struct FilterView: View {
             .padding(.horizontal, 20)
         }
     }
-    
 }
 
 #Preview {
-    NavigationList(isDarkMode: .constant(false))
+    NavigationList(colorScheme: .constant(.light), appearanceMode: .constant(.light))
 }
 

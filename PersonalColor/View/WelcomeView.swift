@@ -4,26 +4,40 @@
 //
 //  Created by Nana on 23/7/24.
 //
+/*
+  RMIT University Vietnam
+  Course: COSC2659|COSC2813 iOS Development
+  Semester: 2024B
+  Assessment: Assignment 1
+  Author: Nguyen Tran Ha Anh
+  ID: s3938490
+  Created date: 23/07/2024
+  Last modified: 02/08/2024
+  Acknowledgement: Acknowledge the resources that you use here.
+*/
 
 import SwiftUI
 
 struct WelcomeView: View {
     @AppStorage("isDarkMode") private var isDarkMode: Bool = true
-    @State private var showingAlert = false
+    @State private var colorScheme: ColorScheme? = .light
+    @State private var appearanceMode: AppearanceMode = .light
     @State var isWelcomeActive: Bool = true
+    @State private var showingSheet = false
 
     var body: some View {
         NavigationStack {
             ZStack {
                 GreetingView()
                 VStack(spacing: 50) {
+
                     Image("aoife")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 400)
                     
                     NavigationLink {
-                        NavigationList(isDarkMode: $isDarkMode)
+                        NavigationList(colorScheme: $colorScheme, appearanceMode: $appearanceMode)
                     } label: {
                         ZStack {
                             Color("title")
@@ -37,22 +51,26 @@ struct WelcomeView: View {
                     }
                 }
                 
-                Button( action: {
-                    showingAlert = showingAlert == true ? false : true
+                Button(action: {
+                    showingSheet.toggle()
                 }) {
                     Image(systemName: "info.circle.fill")
                         .foregroundColor(Color("title"))
                               .font(.system(size: 24))
                 }
                 .offset(x: 160, y: 370)
-                
-                if showingAlert {
-                    Dialog(showingAlert: $showingAlert)
+                .sheet(isPresented: $showingSheet) {
+                    Dialog(showingInfo: $showingSheet)
+                        .presentationDetents([.large, .medium, .fraction(0.4)])
                 }
             }
         }
-        .preferredColorScheme(isDarkMode ? .dark : .light)
+        .preferredColorScheme(colorScheme)
     }
+}
+
+enum AppearanceMode {
+    case dark, light, system
 }
 
 #Preview {
