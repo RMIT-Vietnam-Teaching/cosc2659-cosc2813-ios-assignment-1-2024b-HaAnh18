@@ -111,7 +111,7 @@ struct NavigationList: View {
             })
             .offset(x: 150, y: 725)
             .sheet(isPresented: $showingSheet) {
-                TestColorCamera(showingCamera: $showingSheet)
+                TestColorCamera(showingCamera: $showingSheet, currentBackgroundImageIndex: $viewModel.colorGroup.id)
             }
         }
         
