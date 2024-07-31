@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		393C1C432C522B3200312305 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393C1C422C522B3200312305 /* ViewModel.swift */; };
 		395709912C54F40B00ABDB2B /* DarkLightMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 395709902C54F40B00ABDB2B /* DarkLightMode.swift */; };
+		398967702C59E36200C19B9E /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3989676F2C59E36200C19B9E /* CameraView.swift */; };
+		398967742C59E63300C19B9E /* TestColorCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398967732C59E63300C19B9E /* TestColorCamera.swift */; };
 		39B3837F2C466D6500002F23 /* PersonalColorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B3837E2C466D6500002F23 /* PersonalColorApp.swift */; };
 		39B383812C466D6500002F23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383802C466D6500002F23 /* ContentView.swift */; };
 		39B383832C466D6B00002F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39B383822C466D6B00002F23 /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		393C1C422C522B3200312305 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		395709902C54F40B00ABDB2B /* DarkLightMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkLightMode.swift; sourceTree = "<group>"; };
+		3989676F2C59E36200C19B9E /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		398967732C59E63300C19B9E /* TestColorCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestColorCamera.swift; sourceTree = "<group>"; };
 		39B3837B2C466D6500002F23 /* PersonalColor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalColor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B3837E2C466D6500002F23 /* PersonalColorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColorApp.swift; sourceTree = "<group>"; };
 		39B383802C466D6500002F23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 				393C1C422C522B3200312305 /* ViewModel.swift */,
 				395709902C54F40B00ABDB2B /* DarkLightMode.swift */,
 				39B711F52C56ADDE00C750C8 /* VideoView.swift */,
+				3989676F2C59E36200C19B9E /* CameraView.swift */,
+				398967732C59E63300C19B9E /* TestColorCamera.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -273,6 +279,7 @@
 				39B383FB2C4F908D00002F23 /* WelcomeView.swift in Sources */,
 				39B383A12C46BB1400002F23 /* Carousel.swift in Sources */,
 				39B384092C4FFC3800002F23 /* Dialog.swift in Sources */,
+				398967702C59E36200C19B9E /* CameraView.swift in Sources */,
 				39B383C02C4B99BA00002F23 /* TabViewStore.swift in Sources */,
 				39B383B02C46E44100002F23 /* CardList.swift in Sources */,
 				395709912C54F40B00ABDB2B /* DarkLightMode.swift in Sources */,
@@ -281,6 +288,7 @@
 				39B383B22C46EBC500002F23 /* Detail.swift in Sources */,
 				393C1C432C522B3200312305 /* ViewModel.swift in Sources */,
 				39B3839F2C46B96F00002F23 /* ModelData.swift in Sources */,
+				398967742C59E63300C19B9E /* TestColorCamera.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +427,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PersonalColor/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Aoife;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -451,6 +460,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PersonalColor/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Aoife;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

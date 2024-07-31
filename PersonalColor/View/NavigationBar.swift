@@ -23,7 +23,6 @@ import SwiftUI
 struct NavigationBar: View {
     @State private var showingSheet = false
     @ObservedObject var viewModel: ViewModel
-//    @Binding var isDarkMode: Bool
     @Binding var colorScheme: ColorScheme?
     @Binding var appearanceMode: AppearanceMode
 
@@ -63,7 +62,6 @@ struct NavigationBar: View {
                         Image(systemName: colorScheme == .light ? "sun.max"  : colorScheme == .dark ? "moon" : "gearshape")
                             .font(.title)
                             .foregroundColor(Color("black"))
-        
                     })
                     .sheet(isPresented: $showingSheet) {
                         DarkLightMode(appearanceMode: $appearanceMode, showingSheet: $showingSheet, colorScheme: $colorScheme, viewModel: viewModel)

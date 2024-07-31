@@ -24,7 +24,7 @@ struct NavigationList: View {
     @State private var searchText:String = ""
     @State private var filter: String = "All"
     @State private var isFilter: Bool = false
-//    @Binding var isDarkMode: Bool
+    @State private var showingSheet = false
     @Binding var colorScheme: ColorScheme?
     @Binding var appearanceMode: AppearanceMode
 
@@ -94,6 +94,25 @@ struct NavigationList: View {
             }
             .padding(.top, 70)
             .toolbar(.hidden)
+            
+            Button(action: {
+                showingSheet.toggle()
+            }, label: {
+                Image(systemName: "camera")
+                    .font(.title)
+                    .background {
+                        Circle()
+                            .frame(width: 70, height: 70)
+//                                        .padding()
+                            .foregroundColor(Color(viewModel.colorGroup.color))
+                    }
+                    .foregroundColor(Color(viewModel.colorGroup.backgroundColor))
+                    
+            })
+            .offset(x: 150, y: 725)
+            .sheet(isPresented: $showingSheet) {
+                TestColorCamera(showingCamera: $showingSheet)
+            }
         }
         
     }
