@@ -30,7 +30,7 @@ struct TestColorCamera: View {
         ZStack {
             CameraView()
             GeometryReader { geometry in
-                Image(backgroundImages[currentBackgroundImageIndex - 1])
+                Image(backgroundImages[(currentBackgroundImageIndex - 1 + backgroundImages.count) % backgroundImages.count])
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: geometry.size.width, height: geometry.size.height)
