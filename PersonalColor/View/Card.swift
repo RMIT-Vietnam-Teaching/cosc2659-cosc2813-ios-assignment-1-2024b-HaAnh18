@@ -51,14 +51,12 @@ struct Card: View {
                     .font(Font.custom("PlayfairDisplay-Bold", size: 18))
                     .frame(width: 170, alignment: .top)
                     .foregroundColor(Color("black"))
-                    .padding(.horizontal, -20)
-
+//                    .padding(.horizontal, -20)
                 
                 Text(product.brand)
                     .font(Font.custom("Fustat-Light", size: 18))
                     .frame(width: 150, alignment: .top)
                     .foregroundColor(Color("black"))
-
                     
             }
         }

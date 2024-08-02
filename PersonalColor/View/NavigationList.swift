@@ -117,6 +117,10 @@ struct NavigationList: View {
         
     }
     
+    private func capitalizedWords(word: String) -> String {
+            return word.lowercased().split(separator: " ").map { $0.capitalized }.joined(separator: " ")
+        }
+    
     private func filterProducts() {
         viewModel.productList = products.filter { product in
             return product.personalColor == viewModel.colorGroup.name
@@ -129,9 +133,10 @@ struct NavigationList: View {
         }
         
         if searchText != "" {
+            let capitalSearchText = capitalizedWords(word: searchText)
             viewModel.productList = viewModel.productList.filter { product in
-                return product.name.contains(searchText) || product.brand.contains(searchText) ||
-                product.category.contains(searchText)
+                return product.name.contains(capitalSearchText) || product.brand.contains(capitalSearchText) ||
+                product.category.contains(capitalSearchText)
             }
         }
             

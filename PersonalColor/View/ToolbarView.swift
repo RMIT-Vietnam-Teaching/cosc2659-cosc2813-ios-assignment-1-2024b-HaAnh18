@@ -41,11 +41,11 @@ struct ToolbarView: View {
                         .font(.title)
                         .foregroundColor(Color("black"))
                 })
-                .frame(width: width / 3 - 50)
+                .frame(width: width / 3 - 40)
                 
                 Text(product.name)
                     .font(Font.custom("PlayfairDisplay-Bold", size: 20))
-                    .frame(width: width / 3 + 100)
+                    .frame(width: width / 3 + 80)
                 
                 HStack {
                     Image(systemName: viewModel.contains(product) ? "heart.fill" : "heart")
@@ -54,13 +54,6 @@ struct ToolbarView: View {
                         .onTapGesture {
                             viewModel.toggleFav(product: product)
                         }
-                    
-//                    Image(systemName: isDarkMode ? "sun.max" : "moon")
-//                        .font(.title)
-//                        .foregroundColor(Color("black"))
-//                        .onTapGesture {
-//                            isDarkMode.toggle()
-//                        }
                     
                     Button(action: {
                         showingSheet.toggle()
@@ -75,8 +68,9 @@ struct ToolbarView: View {
                             .presentationDetents([.large, .medium, .fraction(0.35)])
                     }
                     
+                    Spacer()
                 }
-                .frame(width: width / 3 - 50)
+                .frame(width: width / 3 - 40)
             }
             .frame(width: width)
         }

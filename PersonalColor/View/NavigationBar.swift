@@ -32,7 +32,7 @@ struct NavigationBar: View {
     var body: some View {
         GeometryReader { geo in
             let width = geo.size.width
-            HStack(spacing: 0) {
+            HStack {
                 Button(action: {
                     dismiss()
                 }, label: {
@@ -53,7 +53,6 @@ struct NavigationBar: View {
                         Image(systemName: viewModel.showingFavs ? "heart.fill" : "heart")
                             .font(.title)
                             .foregroundColor(Color("black"))
-                        
                     })
                     
                     Button(action: {
@@ -67,6 +66,7 @@ struct NavigationBar: View {
                         DarkLightMode(appearanceMode: $appearanceMode, showingSheet: $showingSheet, colorScheme: $colorScheme, viewModel: viewModel)
                             .presentationDetents([.large, .medium, .fraction(0.35)])
                     }
+                    Spacer()
                 }
                 .frame(width: width / 3 - 30)
             }
