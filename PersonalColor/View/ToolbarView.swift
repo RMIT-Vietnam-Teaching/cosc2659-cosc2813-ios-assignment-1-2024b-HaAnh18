@@ -22,7 +22,6 @@ import SwiftUI
 struct ToolbarView: View {
     @ObservedObject var viewModel: ViewModel
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
-//    @Binding var isDarkMode: Bool
     @Binding var colorScheme: ColorScheme?
     @Binding var appearanceMode: AppearanceMode
     @State private var showingSheet = false
@@ -51,8 +50,8 @@ struct ToolbarView: View {
                     Image(systemName: viewModel.contains(product) ? "heart.fill" : "heart")
                         .font(.title)
                         .foregroundColor(Color("black-custom"))
-                        .onTapGesture {
-                            viewModel.toggleFav(product: product)
+                        .onTapGesture { // Tap gesture to toggle favorite
+                            viewModel.toggleFav(product: product) // Toggle favorite status of the product
                         }
                     
                     Button(action: {
@@ -65,7 +64,7 @@ struct ToolbarView: View {
                     })
                     .sheet(isPresented: $showingSheet) {
                         DarkLightMode(appearanceMode: $appearanceMode, showingSheet: $showingSheet, colorScheme: $colorScheme, viewModel: viewModel)
-                            .presentationDetents([.large, .medium, .fraction(0.35)])
+                            .presentationDetents([.large, .medium, .fraction(0.35)]) // Set the sheet presentation sizes
                     }
                     
                     Spacer()
@@ -76,7 +75,6 @@ struct ToolbarView: View {
         }
         .frame(height: 45)
         .background(Color(viewModel.colorGroup.backgroundColor))
-
     }
 }
 
@@ -85,6 +83,5 @@ struct ToolbarView_Previews: PreviewProvider {
 
     static var previews: some View {
         ToolbarView(viewModel: viewModel, colorScheme: .constant(.light), appearanceMode: .constant(.light), product: products[0])
-//        ToolbarView(viewModel: viewModel, isDarkMode: .constant(false), product: products[0])
     }
 }

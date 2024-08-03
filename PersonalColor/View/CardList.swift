@@ -21,18 +21,17 @@ import SwiftUI
 
 struct CardList: View {
     @ObservedObject var viewModel: ViewModel
-//    @Binding var isDarkMode: Bool
     @Binding var colorScheme: ColorScheme?
     @Binding var appearanceMode: AppearanceMode
-
-    let columns = [GridItem(.flexible()), GridItem(.flexible())]
+    
     var filterProducts: [Product]
-
+    let columns = [GridItem(.flexible()), GridItem(.flexible())] // Define a two-column grid with flexible items
+    
     var body: some View {
-        LazyVGrid(columns: columns) {
+        LazyVGrid(columns: columns) { // LazyVGrid with specified columns
             ForEach(filterProducts) { product in
                 NavigationLink {
-                    Detail(viewModel: viewModel, colorScheme: $colorScheme, appearanceMode: $appearanceMode, product: product)
+                    Detail(viewModel: viewModel, colorScheme: $colorScheme, appearanceMode: $appearanceMode, product: product) // Navigate to Detail view when tapped
                 } label: {
                     Card(viewModel: viewModel, product: product)
                         .padding(.horizontal, 10)

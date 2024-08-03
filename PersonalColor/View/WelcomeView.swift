@@ -19,14 +19,13 @@
 import SwiftUI
 
 struct WelcomeView: View {
-    @AppStorage("isDarkMode") private var isDarkMode: Bool = true
     @State private var colorScheme: ColorScheme? = .light
-    @State private var appearanceMode: AppearanceMode = .light
+    @State private var appearanceMode: AppearanceMode = .light // State variable for color scheme
     @State var isWelcomeActive: Bool = true
     @State private var showingSheet = false
 
     var body: some View {
-        NavigationStack {
+        NavigationStack { // Navigation stack for managing navigation
             ZStack {
                 GreetingView()
                 VStack(spacing: 50) {
@@ -58,14 +57,14 @@ struct WelcomeView: View {
                         .foregroundColor(Color("title"))
                               .font(.system(size: 24))
                 }
-                .offset(x: 160, y: 370)
+                .offset(x: 160, y: 370) // Offset to position the button
                 .sheet(isPresented: $showingSheet) {
                     Dialog(showingInfo: $showingSheet)
                         .presentationDetents([.large, .medium, .fraction(0.4)])
                 }
             }
         }
-        .preferredColorScheme(colorScheme)
+        .preferredColorScheme(colorScheme) // Set the preferred color scheme
     }
 }
 

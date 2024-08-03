@@ -24,7 +24,7 @@ struct VideoView: View {
     var product: Product
     
     var body: some View {
-        Video(videoID: product.video)
+        Video(videoID: product.video) // Embed the Video view with the videoID from the product
             .frame(width: 350, height: 400)
             .padding(.top, 50)
     }
@@ -35,17 +35,17 @@ struct Video: UIViewRepresentable {
     let videoID: String
     
     func makeUIView(context: Context) -> some WKWebView {
-       return WKWebView()
+       return WKWebView() // Create a WKWebView instance
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        guard let youtubeURL = URL(string: "https://www.youtube.com/shorts/\(videoID)")
+        guard let youtubeURL = URL(string: "https://www.youtube.com/shorts/\(videoID)") // Construct the YouTube URL with the video ID
         else {
             return
         }
         
-        uiView.scrollView.isScrollEnabled = false
-        uiView.load(URLRequest(url: youtubeURL))
+        uiView.scrollView.isScrollEnabled = false // Disable scrolling in the web view
+        uiView.load(URLRequest(url: youtubeURL)) // Load the YouTube video URL in the web view
     }
 }
 

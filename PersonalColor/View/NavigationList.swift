@@ -28,7 +28,7 @@ struct NavigationList: View {
     @Binding var colorScheme: ColorScheme?
     @Binding var appearanceMode: AppearanceMode
 
-    let filterOptions: [String] = ["All", "Palette", "Blush", "Lipstick"]
+    let filterOptions: [String] = ["All", "Palette", "Blush", "Lipstick"] // Filter options
 
     var body: some View {
         ZStack(alignment: .top) {
@@ -50,15 +50,15 @@ struct NavigationList: View {
                         CardList(viewModel: viewModel, colorScheme: $colorScheme, appearanceMode: $appearanceMode, filterProducts: viewModel.filteredProducts)
                             .padding(.top, 70)
                             .onAppear{
-                                filterProducts()
+                                filterProducts() // Filter products on appear
                             }
                             .onChange(of: viewModel.colorGroup, initial: true, {
-                                filterProducts()
+                                filterProducts() // Filter products on change
                             })
                         
                         FilterView(isFilter: $isFilter, colorGroup: $viewModel.colorGroup, searchText: $searchText, filter: $filter, filterFunction: filterProducts)
                             .overlay(content: {
-                                if isFilter {
+                                if isFilter { // Show filter options if isFilter is true
                                     ZStack(alignment: .top) {
                                         RoundedRectangle(cornerRadius: 25.0)
                                             .frame(width: 150)
@@ -96,31 +96,32 @@ struct NavigationList: View {
             .toolbar(.hidden)
             
             Button(action: {
-                showingSheet.toggle()
+                showingSheet.toggle() // Toggle sheet visibility
             }, label: {
                 Image(systemName: "camera")
                     .font(.title)
                     .background {
                         Circle()
                             .frame(width: 70, height: 70)
-//                                        .padding()
                             .foregroundColor(Color(viewModel.colorGroup.color))
                     }
                     .foregroundColor(Color(viewModel.colorGroup.backgroundColor))
                     
             })
             .offset(x: 150, y: 725)
-            .sheet(isPresented: $showingSheet) {
+            .sheet(isPresented: $showingSheet) { // Present sheet when showingSheet is true
                 TestColorCamera(showingCamera: $showingSheet, currentBackgroundImageIndex: $viewModel.colorGroup.id)
             }
         }
         
     }
     
+    // Function to capitalize words
     private func capitalizedWords(word: String) -> String {
             return word.lowercased().split(separator: " ").map { $0.capitalized }.joined(separator: " ")
         }
     
+    // Function to filter products
     private func filterProducts() {
         viewModel.productList = products.filter { product in
             return product.personalColor == viewModel.colorGroup.name
@@ -132,7 +133,7 @@ struct NavigationList: View {
             }
         }
         
-        if searchText != "" {
+        if searchText != "" { // Apply search filter if searchText is not empty
             let capitalSearchText = capitalizedWords(word: searchText)
             viewModel.productList = viewModel.productList.filter { product in
                 return product.name.contains(capitalSearchText) || product.brand.contains(capitalSearchText) ||

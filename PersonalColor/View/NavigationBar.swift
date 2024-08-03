@@ -31,32 +31,33 @@ struct NavigationBar: View {
 
     var body: some View {
         GeometryReader { geo in
-            let width = geo.size.width
+            let width = geo.size.width // Get the width of the geometry
             HStack {
                 Button(action: {
-                    dismiss()
+                    dismiss() // Action to dismiss the current view
                 }, label: {
                     Image(systemName: "house")
                         .font(.title)
                         .foregroundColor(Color("black-custom"))
                     
                 })
-                .frame(width: width / 3 - 30)
+                .frame(width: width / 3 - 30) // Set the button width to one-third of the screen width minus 30 
+                
                 Text("Aoife")
                     .font(Font.custom("PlayfairDisplay-Bold", size: 40))
                     .frame(width: width / 3 + 60)
                 
                 HStack {
                     Button(action: {
-                        viewModel.sortFavs()
+                        viewModel.sortFavs() // Action to sort favorites
                     }, label: {
-                        Image(systemName: viewModel.showingFavs ? "heart.fill" : "heart")
+                        Image(systemName: viewModel.showingFavs ? "heart.fill" : "heart") // Heart icon, filled if showingFavs is true
                             .font(.title)
                             .foregroundColor(Color("black-custom"))
                     })
                     
                     Button(action: {
-                        showingSheet.toggle()
+                        showingSheet.toggle() // Toggle the sheet presentation
                     }, label: {
                         Image(systemName: colorScheme == .light ? "sun.max"  : colorScheme == .dark ? "moon" : "gearshape")
                             .font(.title)
@@ -64,7 +65,7 @@ struct NavigationBar: View {
                     })
                     .sheet(isPresented: $showingSheet) {
                         DarkLightMode(appearanceMode: $appearanceMode, showingSheet: $showingSheet, colorScheme: $colorScheme, viewModel: viewModel)
-                            .presentationDetents([.large, .medium, .fraction(0.35)])
+                            .presentationDetents([.large, .medium, .fraction(0.35)]) // Set the sheet presentation sizes
                     }
                     Spacer()
                 }

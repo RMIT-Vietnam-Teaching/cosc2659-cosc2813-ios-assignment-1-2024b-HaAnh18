@@ -49,8 +49,8 @@ struct MapView: View {
                 
             }
             
-            Map(position: $cameraPosition) {
-                Annotation("\(product.brand) Store", coordinate: product.locationCoordinate, content: {
+            Map(position: $cameraPosition) { // Map view with a binding to the camera position
+                Annotation("\(product.brand) Store", coordinate: product.locationCoordinate, content: { // Annotation for the store location
                     ZStack {
                         Button(action: {
                             seeDetail = seeDetail == false ? true : false
@@ -82,8 +82,8 @@ struct MapView: View {
                     }
                 })
             }
-            .onAppear{
-                setRegion(_coordinate: product.locationCoordinate)
+            .onAppear{ // Set region and camera position when the view appears
+                setRegion(_coordinate: product.locationCoordinate) // Set the region based on the product location
                 cameraPosition = .region(region)
             }
             .frame(width: 300, height: 300)
@@ -95,21 +95,21 @@ struct MapView: View {
         .padding(.top, 120)
         .frame(height: 600)
     }
-        private func setRegion(_coordinate: CLLocationCoordinate2D) {
-            region = MKCoordinateRegion(
-                center: product.locationCoordinate,
-                span: MKCoordinateSpan(latitudeDelta: 0.006, longitudeDelta: 0.006)
-            )
-        }
+    
+    // Function to set the map region
+    private func setRegion(_coordinate: CLLocationCoordinate2D) {
+        region = MKCoordinateRegion(
+            center: product.locationCoordinate, // Center the region on the product location
+            span: MKCoordinateSpan(latitudeDelta: 0.006, longitudeDelta: 0.006)
+        )
+    }
 }
 
 struct MapView_Previews: PreviewProvider {
     @StateObject static var viewModel = ViewModel()
 
     static var previews: some View {
-        TabViewStore(viewModel: viewModel, product: products[0])
-
-//        MapView(viewModel: viewModel, product: products[0])
+        MapView(viewModel: viewModel, product: products[0])
     }
 }
 

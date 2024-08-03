@@ -22,7 +22,6 @@ import SwiftUI
 struct Detail: View {
     @ObservedObject var viewModel: ViewModel
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
-//    @Binding var isDarkMode: Bool
     @Binding var colorScheme: ColorScheme?
     @Binding var appearanceMode: AppearanceMode
     
@@ -34,7 +33,6 @@ struct Detail: View {
                 .ignoresSafeArea()
             
             ToolbarView(viewModel: viewModel, colorScheme: $colorScheme, appearanceMode: $appearanceMode, product: product)
-//            ToolbarView(viewModel: viewModel, isDarkMode: $isDarkMode, product: product)
                 .zIndex(1)
             
             ScrollView {

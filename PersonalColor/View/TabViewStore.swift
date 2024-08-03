@@ -21,18 +21,17 @@ import SwiftUI
 import MapKit
 
 struct TabViewStore: View {
-    @State var currentTab: Int = 0
+    @State var currentTab: Int = 0 // State variable to track the current tab
     @ObservedObject var viewModel: ViewModel
 
     var product: Product
     
     var body: some View {
         ZStack(alignment: .top) {
-            TabView(selection: self.$currentTab) {
-                MapView(viewModel: viewModel, product: product).tag(0)
-                OnlineStore(product: product).tag(1)
-//                VideoDemo().tag(2)
-                VideoView(product: product).tag(2)
+            TabView(selection: self.$currentTab) { // TabView with a binding to the current tab
+                MapView(viewModel: viewModel, product: product).tag(0)  // MapView for the first tab
+                OnlineStore(product: product).tag(1) // VideoView for the third tab
+                VideoView(product: product).tag(2) // VideoView for the third tab
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
             
@@ -45,7 +44,8 @@ struct TabViewStore: View {
 struct TabBarView: View {
     @ObservedObject var viewModel: ViewModel
     @Binding var currentTab: Int
-    @Namespace var namespace
+    @Namespace var namespace // Namespace for matched geometry effect
+    
     var tabBarOptions: [String] = ["Offline Store", "Online Store", "Swatch Video"]
     
     var body: some View {
@@ -62,7 +62,7 @@ struct TabBarView: View {
 struct TabBarItems: View {
     @ObservedObject var viewModel: ViewModel
     @Binding var currentTab: Int
-    let namespace: Namespace.ID
+    let namespace: Namespace.ID // Namespace for matched geometry effect
     var tabBarItemName: String
     var tab: Int
     
@@ -75,7 +75,7 @@ struct TabBarItems: View {
                     .font(Font.custom(currentTab == tab ? "Fustat-Bold" : "Fustat-Light", size: 18))
                     .foregroundColor(currentTab == tab ? Color(viewModel.colorGroup.color) : Color("black-custom"))
 
-                if currentTab == tab {
+                if currentTab == tab { // If this is the current tab
                     Color(currentTab == tab ? Color(viewModel.colorGroup.color) : Color("black-custom"))
                         .frame(height: 1)
                         .matchedGeometryEffect(id: "underline", in: namespace, properties: .frame)
@@ -84,7 +84,7 @@ struct TabBarItems: View {
                         .frame(height: 1)
                 }
             }
-            .animation(.spring(), value: self.currentTab)
+            .animation(.spring(), value: self.currentTab) // Apply spring animation to the current tab change
         })
     }
 }

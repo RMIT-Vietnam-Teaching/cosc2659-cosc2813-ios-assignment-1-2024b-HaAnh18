@@ -33,9 +33,9 @@ struct OnlineStore: View {
             .padding(.horizontal, 20)
             .frame(height: 40)
             
-            
-            if let url = URL(string: product.shopee.url) {
-                if url.scheme == "http" || url.scheme == "https" {
+            // Shopee link
+            if let url = URL(string: product.shopee.url) { // Check if the URL is valid
+                if url.scheme == "http" || url.scheme == "https" { // Check if the URL scheme is http or https
                     Link(destination: url) {
                         HStack(spacing: 10) {
                             Image("shopee")
@@ -54,8 +54,9 @@ struct OnlineStore: View {
                 }
             }
             
-            if let url = URL(string: product.lazada.url) {
-                if url.scheme == "http" || url.scheme == "https" {
+            // Lazada link
+            if let url = URL(string: product.lazada.url) { // Check if the URL is valid
+                if url.scheme == "http" || url.scheme == "https" { // Check if the URL scheme is http or https
                     Link(destination: url) {
                         HStack(spacing: 10) {
                             Image("lazada")
@@ -75,8 +76,9 @@ struct OnlineStore: View {
                 }
             }
             
-            if let url = URL(string: product.facebook.url) {
-                if url.scheme == "http" || url.scheme == "https" {
+            // Facebook link
+            if let url = URL(string: product.facebook.url) { // Check if the URL is valid
+                if url.scheme == "http" || url.scheme == "https" { // Check if the URL scheme is http or https
                     Link(destination: url) {
                         HStack(spacing: 10) {
                             Image("facebook")
@@ -96,8 +98,9 @@ struct OnlineStore: View {
                 }
             }
             
-            if let url = URL(string: product.instagram.url) {
-                if url.scheme == "http" || url.scheme == "https" {
+            // Instagram link
+            if let url = URL(string: product.instagram.url) { // Check if the URL is valid
+                if url.scheme == "http" || url.scheme == "https" { // Check if the URL scheme is http or https
                     Link(destination: url) {
                         HStack(spacing: 10) {
                             Image("instagram")

@@ -30,19 +30,17 @@ struct TestColorCamera: View {
         ZStack {
             CameraView()
             GeometryReader { geometry in
-                Image(backgroundImages[(currentBackgroundImageIndex - 1 + backgroundImages.count) % backgroundImages.count])
+                Image(backgroundImages[(currentBackgroundImageIndex - 1 + backgroundImages.count) % backgroundImages.count]) // Get the current background image
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: geometry.size.width, height: geometry.size.height)
                     .clipped()
                     .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
-              
-
             }
         }
         .ignoresSafeArea()
         .onTapGesture {
-            currentBackgroundImageIndex = (currentBackgroundImageIndex + 1) % backgroundImages.count
+            currentBackgroundImageIndex = (currentBackgroundImageIndex + 1) % backgroundImages.count // Update the background image index on tap
         }
         
     }

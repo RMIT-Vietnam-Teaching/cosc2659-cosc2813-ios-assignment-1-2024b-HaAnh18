@@ -22,8 +22,8 @@ import SwiftUI
 struct ScrollImage: View {
     var images: [String]
     var body: some View {
-        GeometryReader {
-            let size = $0.size
+        GeometryReader { // GeometryReader to get the size of the view
+            let size = $0.size  // Get the size of the geometry
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
@@ -34,17 +34,17 @@ struct ScrollImage: View {
                             .frame(width: size.width / 2)
                             .shadow(color: .black.opacity(0.15), radius: 5, x: 5, y: 5)
                             .scrollTransition(.interactive, axis: .horizontal) {
-                                view, phase in
+                                view, phase in // Apply a scroll transition
                                 view
-                                    .scaleEffect(phase.isIdentity ? 1 : 0.4)
+                                    .scaleEffect(phase.isIdentity ? 1 : 0.4) // Scale the view based on the phase
                             }
                     }
                 }
-                .scrollTargetLayout()
+                .scrollTargetLayout() // Layout for scroll targets
                 .frame(height: 200)
                 .padding(.horizontal, size.width / 2 - 100)
             }
-            .scrollTargetBehavior(.viewAligned)
+            .scrollTargetBehavior(.viewAligned) // Align the scroll target to the view
             .scrollIndicators(.hidden)
         }
         .frame(height: 200)
