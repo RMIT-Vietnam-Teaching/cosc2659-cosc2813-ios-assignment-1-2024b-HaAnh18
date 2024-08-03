@@ -28,7 +28,7 @@ struct DarkLightMode: View {
 
     var body: some View {
         ZStack(alignment: .top) {
-            Color("white")
+            Color("white-custom")
                 .ignoresSafeArea()
             
             VStack {

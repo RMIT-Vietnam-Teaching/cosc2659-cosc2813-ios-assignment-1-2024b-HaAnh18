@@ -45,7 +45,7 @@ struct OnlineStore: View {
                             
                             Text(product.shopee.name)
                                 .font(Font.custom("Fustat-Light", size: 18))
-                                .foregroundColor(Color("black"))
+                                .foregroundColor(Color("black-custom"))
                             
                             Spacer()
                         }
@@ -65,7 +65,7 @@ struct OnlineStore: View {
                             
                             Text(product.lazada.name)
                                 .font(Font.custom("Fustat-Light", size: 18))
-                                .foregroundColor(Color("black"))
+                                .foregroundColor(Color("black-custom"))
                             
                             Spacer()
 
@@ -86,7 +86,7 @@ struct OnlineStore: View {
                             
                             Text(product.facebook.name)
                                 .font(Font.custom("Fustat-Light", size: 18))
-                                .foregroundColor(Color("black"))
+                                .foregroundColor(Color("black-custom"))
                             
                             Spacer()
 
@@ -107,7 +107,7 @@ struct OnlineStore: View {
                             
                             Text(product.instagram.name)
                                 .font(Font.custom("Fustat-Light", size: 18))
-                                .foregroundColor(Color("black"))
+                                .foregroundColor(Color("black-custom"))
                             
                             Spacer()
 

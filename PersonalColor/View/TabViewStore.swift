@@ -73,10 +73,10 @@ struct TabBarItems: View {
             VStack {
                 Text(tabBarItemName)
                     .font(Font.custom(currentTab == tab ? "Fustat-Bold" : "Fustat-Light", size: 18))
-                    .foregroundColor(currentTab == tab ? Color(viewModel.colorGroup.color) : Color("black"))
+                    .foregroundColor(currentTab == tab ? Color(viewModel.colorGroup.color) : Color("black-custom"))
 
                 if currentTab == tab {
-                    Color(currentTab == tab ? Color(viewModel.colorGroup.color) : .black)
+                    Color(currentTab == tab ? Color(viewModel.colorGroup.color) : Color("black-custom"))
                         .frame(height: 1)
                         .matchedGeometryEffect(id: "underline", in: namespace, properties: .frame)
                 } else {

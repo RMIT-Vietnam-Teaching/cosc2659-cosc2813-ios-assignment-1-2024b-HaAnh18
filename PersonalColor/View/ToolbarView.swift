@@ -39,7 +39,7 @@ struct ToolbarView: View {
                 }, label: {
                     Image(systemName: "chevron.backward")
                         .font(.title)
-                        .foregroundColor(Color("black"))
+                        .foregroundColor(Color("black-custom"))
                 })
                 .frame(width: width / 3 - 40)
                 
@@ -50,7 +50,7 @@ struct ToolbarView: View {
                 HStack {
                     Image(systemName: viewModel.contains(product) ? "heart.fill" : "heart")
                         .font(.title)
-                        .foregroundColor(Color("black"))
+                        .foregroundColor(Color("black-custom"))
                         .onTapGesture {
                             viewModel.toggleFav(product: product)
                         }
@@ -58,9 +58,9 @@ struct ToolbarView: View {
                     Button(action: {
                         showingSheet.toggle()
                     }, label: {
-                        Image(systemName: colorScheme == .dark ? "sun.max"  : colorScheme == .light ? "moon" : "gearshape")
+                        Image(systemName: colorScheme == .dark ? "moon"  : colorScheme == .light ? "sun.max" : "gearshape")
                             .font(.title)
-                            .foregroundColor(Color("black"))
+                            .foregroundColor(Color("black-custom"))
         
                     })
                     .sheet(isPresented: $showingSheet) {

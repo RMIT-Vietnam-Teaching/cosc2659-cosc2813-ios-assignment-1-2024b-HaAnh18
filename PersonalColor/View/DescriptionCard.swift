@@ -24,25 +24,22 @@ struct DescriptionCard: View {
     
     var body: some View {
         VStack(spacing: 10) {
-            //            Text("Description")
-            //                .font(Font.custom("PlayfairDisplay-Bold", size: 25))
-            ////                .font(Font.custom("DancingScript-Bold", size: 45))
             Text("Description")
                 .font(Font.custom("PlayfairDisplay-Bold", size: 25))
                 .padding(.top, 35)
-                .foregroundColor(Color("white"))
+                .foregroundColor(Color("white-custom"))
             
             Text(product.description)
                 .padding(.horizontal, 60)
                 .padding(.bottom, 35)
                 .minimumScaleFactor(0.5)
-                .foregroundColor(Color("white"))
+                .foregroundColor(Color("white-custom"))
                 .font(Font.custom("Fustat-Light", size: 16))
         }
         .frame(width: 400)
         .background(content: {
             RoundedRectangle(cornerRadius: 25.0)
-                .stroke(Color("black"), lineWidth: 1.0)
+                .stroke(Color("black-custom"), lineWidth: 1.0)
                 .rotationEffect(.degrees(10))
                 .padding()
                 .frame(width: 355)
@@ -53,7 +50,7 @@ struct DescriptionCard: View {
                 .frame(width: 350)
             
             RoundedRectangle(cornerRadius: 25.0)
-                .stroke(Color("black"), lineWidth: 1.0)
+                .stroke(Color("black-custom"), lineWidth: 1.0)
                 .rotationEffect(.degrees(-10))
                 .padding()
                 .frame(width: 355)

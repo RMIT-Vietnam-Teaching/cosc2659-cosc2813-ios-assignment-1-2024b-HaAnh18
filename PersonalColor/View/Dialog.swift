@@ -25,10 +25,10 @@ struct Dialog: View {
     var body: some View {
         
         ZStack(alignment: .top) {
-            Color("white")
+            Color("white-custom")
                 
             VStack(spacing: 30) {
-                Text("💖 Authur Information 💖")
+                Text("💖 Author's Information 💖")
                     .font(Font.custom("DancingScript-Bold", size: 35))
                     .padding(.top, 30)
                 

@@ -38,7 +38,7 @@ struct NavigationBar: View {
                 }, label: {
                     Image(systemName: "house")
                         .font(.title)
-                        .foregroundColor(Color("black"))
+                        .foregroundColor(Color("black-custom"))
                     
                 })
                 .frame(width: width / 3 - 30)
@@ -52,7 +52,7 @@ struct NavigationBar: View {
                     }, label: {
                         Image(systemName: viewModel.showingFavs ? "heart.fill" : "heart")
                             .font(.title)
-                            .foregroundColor(Color("black"))
+                            .foregroundColor(Color("black-custom"))
                     })
                     
                     Button(action: {
@@ -60,7 +60,7 @@ struct NavigationBar: View {
                     }, label: {
                         Image(systemName: colorScheme == .light ? "sun.max"  : colorScheme == .dark ? "moon" : "gearshape")
                             .font(.title)
-                            .foregroundColor(Color("black"))
+                            .foregroundColor(Color("black-custom"))
                     })
                     .sheet(isPresented: $showingSheet) {
                         DarkLightMode(appearanceMode: $appearanceMode, showingSheet: $showingSheet, colorScheme: $colorScheme, viewModel: viewModel)

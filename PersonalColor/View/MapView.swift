@@ -70,11 +70,11 @@ struct MapView: View {
                                     .font(Font.custom("Fustat-Light", size: 14))
                             }
                             .font(Font.custom("Fustat-Light", size: 10))
-                            .foregroundColor(Color("white"))
+                            .foregroundColor(Color("white-custom"))
                             .background {
                                 RoundedRectangle(cornerRadius: 10.0)
-                                    .foregroundColor(Color("spring").opacity(0.8))
-                                    .frame(width: 200, height: 70)
+                                    .foregroundColor(Color(viewModel.colorGroup.color).opacity(0.8))
+                                    .frame(width: 220)
                             }
                             .offset(x: -40, y: -55)
                             .frame(width: 200, alignment: .top)
