@@ -16,6 +16,7 @@
 		398967AD2C5F215300C19B9E /* product-detailed-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 398967AC2C5F215300C19B9E /* product-detailed-screen.png */; };
 		398967AF2C5F236D00C19B9E /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 398967AE2C5F236D00C19B9E /* app-icon.png */; };
 		398967B12C5F282000C19B9E /* welcome-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 398967B02C5F282000C19B9E /* welcome-screen.png */; };
+		398967B32C5F294300C19B9E /* GithubLink.md in Resources */ = {isa = PBXBuildFile; fileRef = 398967B22C5F294300C19B9E /* GithubLink.md */; };
 		39B3837F2C466D6500002F23 /* PersonalColorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B3837E2C466D6500002F23 /* PersonalColorApp.swift */; };
 		39B383812C466D6500002F23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B383802C466D6500002F23 /* ContentView.swift */; };
 		39B383832C466D6B00002F23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39B383822C466D6B00002F23 /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		398967AC2C5F215300C19B9E /* product-detailed-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "product-detailed-screen.png"; sourceTree = "<group>"; };
 		398967AE2C5F236D00C19B9E /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
 		398967B02C5F282000C19B9E /* welcome-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "welcome-screen.png"; sourceTree = "<group>"; };
+		398967B22C5F294300C19B9E /* GithubLink.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = GithubLink.md; sourceTree = "<group>"; };
 		39B3837B2C466D6500002F23 /* PersonalColor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalColor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39B3837E2C466D6500002F23 /* PersonalColorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalColorApp.swift; sourceTree = "<group>"; };
 		39B383802C466D6500002F23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		39B383722C466D6500002F23 = {
 			isa = PBXGroup;
 			children = (
+				398967B22C5F294300C19B9E /* GithubLink.md */,
 				398967A32C5F1F5600C19B9E /* Screenshots */,
 				398967A12C5F1ECE00C19B9E /* README.md */,
 				39B3837D2C466D6500002F23 /* PersonalColor */,
@@ -280,6 +283,7 @@
 				39B383862C466D6B00002F23 /* Preview Assets.xcassets in Resources */,
 				39B383C82C4C390800002F23 /* products.json in Resources */,
 				39B383832C466D6B00002F23 /* Assets.xcassets in Resources */,
+				398967B32C5F294300C19B9E /* GithubLink.md in Resources */,
 				398967A22C5F1ECE00C19B9E /* README.md in Resources */,
 				39B383AE2C46E29100002F23 /* PTSerif-Bold.ttf in Resources */,
 			);
