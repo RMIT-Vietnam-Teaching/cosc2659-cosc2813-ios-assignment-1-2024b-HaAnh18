@@ -22,20 +22,20 @@
   </tr>
   <tr>
     <td><a href="https://www.youtube.com/watch?v=OK9bVuZ9TZk?si=lpbScTyRHWtFmHVn">
-    <img src="https://youtu.be/OK9bVuZ9TZk?si=lpbScTyRHWtFmHVn/maxresdefault.jpg" width="360" alt="Watch the video">
+    <img src="./Screenshots/welcome-screen.png" width="360" alt="Watch the video">
 </a></td>
         <td><a href="https://youtu.be/OZI27ruNm_M">
-    <img src="https://youtu.be/OZI27ruNm_M/maxresdefault.jpg" width="360" alt="Watch the video">
+    <img src="./Screenshots/welcome-screen.png" width="360" alt="Watch the video">
 </a></td>
    </tr>
 
  </table>
 
 ## 🔧 Build Information
-- Xcode 13.4.1
+- Xcode 15.4
 - SwiftUI Framework
-- Target Deployment iOS >=15.5
-- Library: CoreLocation for the MapKit
+- Target Deployment iOS 17.5
+- Library: MapKit, AVFoundation
 
-## 🏆 Author
-- Huynh Nguyen Minh Thong (Tom Huynh) - tomhuynhsg@gmail.com
+## 🌸 Author
+- Nguyen Tran Ha Anh (s3938490)
