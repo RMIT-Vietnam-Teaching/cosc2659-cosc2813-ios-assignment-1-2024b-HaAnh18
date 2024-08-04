@@ -8,12 +8,12 @@
 
 ![Database](./Screenshots/welcome-screen.png)
 
-<!--<p align="center">-->
-<!--  <img src="https://i.imgur.com/tyRPWoU.png" width="200" > -->
-<!--  <img src="https://i.imgur.com/pKrM1Hq.png" width="200" > -->
-<!--  <img src="https://i.imgur.com/fUnVWV4.png" width="200" > -->
-<!--  <img src="https://i.imgur.com/2nkYjyf.png" width="200" >-->
-<!--</p>-->
+<p align="center">
+  <img src="./Screenshots/welcome-screen.png" width="200" > 
+  <img src="https://i.imgur.com/pKrM1Hq.png" width="200" > 
+  <img src="https://i.imgur.com/fUnVWV4.png" width="200" > 
+  <img src="https://i.imgur.com/2nkYjyf.png" width="200" >
+</p>
 
 Note: there is another branch "no-map" which is the simplifed version of the contact list contains no map feature for people who are not interested in the map feature.
 
