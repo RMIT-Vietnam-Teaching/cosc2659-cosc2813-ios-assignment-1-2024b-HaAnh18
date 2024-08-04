@@ -17,8 +17,8 @@
 
 <table>
   <tr>
-     <td>Simulator</td>
-     <td>Device</td>
+     <td style="text-align: center; font-weight: bold;">Simulator</td>
+     <td style="text-align: center; font-weight: bold;">Device</td>
   </tr>
   <tr>
     <td><a href="https://www.youtube.com/watch?v=OK9bVuZ9TZk?si=lpbScTyRHWtFmHVn">
