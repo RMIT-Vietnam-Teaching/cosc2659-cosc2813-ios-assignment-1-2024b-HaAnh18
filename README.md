@@ -21,7 +21,7 @@
      <td style="text-align: center; font-weight: bold;">Device</td>
   </tr>
   <tr>
-    <td><a href="https://www.youtube.com/watch?v=OK9bVuZ9TZk?si=lpbScTyRHWtFmHVn">
+    <td><a href="https://youtu.be/XdE2AnAX6OM?si=-CB_0Fnh9vzgo5Vm">
     <img src="./Screenshots/welcome-screen.png" width="360" alt="Watch the video">
 </a></td>
         <td><a href="https://youtu.be/OZI27ruNm_M">
