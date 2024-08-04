@@ -21,8 +21,8 @@
      <td>Device</td>
   </tr>
   <tr>
-    <td><a href="https://youtu.be/OK9bVuZ9TZk">
-    <img src="https://youtu.be/OK9bVuZ9TZk/maxresdefault.jpg" width="360" alt="Watch the video">
+    <td><a href="https://www.youtube.com/watch?v=OK9bVuZ9TZk?si=lpbScTyRHWtFmHVn">
+    <img src="https://youtu.be/OK9bVuZ9TZk?si=lpbScTyRHWtFmHVn/maxresdefault.jpg" width="360" alt="Watch the video">
 </a></td>
         <td><a href="https://youtu.be/OZI27ruNm_M">
     <img src="https://youtu.be/OZI27ruNm_M/maxresdefault.jpg" width="360" alt="Watch the video">
